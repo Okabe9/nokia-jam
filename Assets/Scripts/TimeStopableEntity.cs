@@ -17,5 +17,4 @@ public abstract class TimeStoppableEntity : MonoBehaviour
   {
     isTimeStopped = !isTimeStopped;
   }
-
 }

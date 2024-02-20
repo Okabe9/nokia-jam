@@ -42,7 +42,6 @@ public class LemmingController : TimeStoppableEntity
   }
   public void Death()
   {
-    Debug.Log("Lemming has died");
     //Instantiate another lemming on the startingPosition
     Instantiate(gameObject, startingPosition, Quaternion.identity);
     Destroy(gameObject);

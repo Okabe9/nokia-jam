@@ -7,6 +7,8 @@ public class Pinxo : TimeStoppableEntity
   int verticalMovement = -2;
   [SerializeField]
   float activationTime = 0.2f;
+  
+
   // Start is called before the first frame update
   void Start()
   {
@@ -17,17 +19,14 @@ public class Pinxo : TimeStoppableEntity
   // Update is called once per frame
   void Update()
   {
-    if (!isTimeStopped)
-    {
-
-    }
+        if (!isTimeStopped)
+            EntityMovement();
 
   }
   private void OnTriggerEnter2D(Collider2D other)
   {
     if (other.gameObject.CompareTag("Player"))
     {
-      Debug.Log("Player has been hit by Pinxo");
       other.gameObject.GetComponent<LemmingController>().Death();
     }
   }
@@ -35,14 +34,12 @@ public class Pinxo : TimeStoppableEntity
   {
     if (timeRemaining > 0)
     {
-      Debug.Log(timeRemaining);
 
       timeRemaining -= Time.deltaTime;
     }
     else
     {
       //Move spike vertically
-      Debug.Log("Moving spike");
       this.transform.position += new Vector3(0, verticalMovement, 0);
       verticalMovement *= -1;
       if (verticalMovement == 2)
