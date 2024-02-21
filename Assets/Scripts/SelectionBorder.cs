@@ -27,7 +27,8 @@ public class SelectionBorder : MonoBehaviour
         timeStoppableEntity.StopTime();
 
     }
-    PaintOnUnfreeze();
+    PaintOnFreeze();
+
   }
   public void UnfreezeTimeStoppableEntities()
   {
@@ -41,7 +42,8 @@ public class SelectionBorder : MonoBehaviour
         timeStoppableEntity.StartTime();
 
     }
-    PaintOnFreeze();
+    PaintOnUnfreeze();
+
   }
   public void PaintOnFreeze()
   {
