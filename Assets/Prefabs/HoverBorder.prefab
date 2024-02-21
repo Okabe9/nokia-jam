@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8387066336368243578}
   - component: {fileID: -5813587034059374201}
   - component: {fileID: 9133264192306041256}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HoverBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

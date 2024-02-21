@@ -7,7 +7,6 @@ public class FrozenArea : MonoBehaviour
     // List to store colliders completely inside the trigger
     private List<Collider2D> collidersInside = new List<Collider2D>();
     private List<Collider2D> collidersInBack = new List<Collider2D>();
-
     private List<string> sortingLayersNames = new List<string> ();
 
     private Dictionary<string, int> layerIDs = new Dictionary<string, int>();
@@ -35,10 +34,10 @@ public class FrozenArea : MonoBehaviour
             if (!layerIDs.ContainsKey(collider.gameObject.name))
                 layerIDs.Add(collider.gameObject.name, collider.gameObject.layer);
 
-            collider.gameObject.layer = LayerMask.NameToLayer("BehindFrozenPlane");
-
             if (!collidersInBack.Contains(collider))
                 collidersInBack.Add(collider);
+
+            collider.gameObject.layer = LayerMask.NameToLayer("BehindFrozenPlane");
         }
     }
 
@@ -49,6 +48,9 @@ public class FrozenArea : MonoBehaviour
             collider.gameObject.layer = layerIDs[collider.gameObject.name];
             layerIDs.Remove(collider.gameObject.name);
         }
+
+        if (collidersInBack.Contains(collider))
+            collidersInBack.Remove(collider);
     }
 
     private void OnDestroy()
@@ -58,7 +60,7 @@ public class FrozenArea : MonoBehaviour
             if (layerIDs.ContainsKey(collider.gameObject.name))
                 collider.gameObject.layer = layerIDs[collider.gameObject.name];
         }
-        
+
         int i = 0;
         foreach (Collider2D collider in collidersInside)
         {
