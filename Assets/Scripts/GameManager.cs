@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
   private List<GameObject> activatedBorderInstances = new List<GameObject>();
 
   [SerializeField]
-  private List<Pallete> palletes = new List<Pallete>();
+  public List<Pallete> palletes = new List<Pallete>();
 
   public int currentPalleteIndex = 0;
   // Singleton pattern
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         activatedBorderInstances.Remove(border);
         Destroy(border);
         print("Unfreezed Section" + gridX + " " + gridY);
-        selectionBorder.FreezeTimeStoppableEntities();
+        selectionBorder.UnfreezeTimeStoppableEntities();
 
         return false;
       }

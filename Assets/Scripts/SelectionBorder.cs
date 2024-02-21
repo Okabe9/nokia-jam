@@ -4,50 +4,90 @@ using UnityEngine;
 
 public class SelectionBorder : MonoBehaviour
 {
-    // List to store colliders completely inside the trigger
-    private List<Collider2D> collidersInside = new List<Collider2D>();
 
-    private void OnTriggerEnter2D(Collider2D other)
+  private bool IsColliderCompletelyInside(Collider2D collider)
+  {
+    Collider2D triggerCollider = GetComponent<Collider2D>();
+
+    Bounds triggerBounds = triggerCollider.bounds;
+    Bounds colliderBounds = collider.bounds;
+
+    return triggerBounds.Contains(colliderBounds.min) && triggerBounds.Contains(colliderBounds.max);
+  }
+
+  public void FreezeTimeStoppableEntities()
+  {
+    Collider2D[] collidersInside = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("Default", "Ground", "Wall"));
+
+    foreach (Collider2D collider in collidersInside)
     {
-        if (!collidersInside.Contains(other) && !other.gameObject.CompareTag("Player"))
+      TimeStoppableEntity timeStoppableEntity = collider.GetComponent<TimeStoppableEntity>();
+
+      if (timeStoppableEntity != null)
+        timeStoppableEntity.StopTime();
+
+    }
+    PaintOnUnfreeze();
+  }
+  public void UnfreezeTimeStoppableEntities()
+  {
+    Collider2D[] collidersInside = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("Default", "Ground", "Wall"));
+
+    foreach (Collider2D collider in collidersInside)
+    {
+      TimeStoppableEntity timeStoppableEntity = collider.GetComponent<TimeStoppableEntity>();
+
+      if (timeStoppableEntity != null)
+        timeStoppableEntity.StartTime();
+
+    }
+    PaintOnFreeze();
+  }
+  public void PaintOnFreeze()
+  {
+    Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("Default", "Ground", "Wall"));
+    foreach (Collider2D collider in colliders)
+    {
+      if (!collider.gameObject.CompareTag("Player"))
+      {
+        Debug.Log(collider.gameObject.name);
+
+        if (collider.gameObject.tag != "Background" && collider.gameObject.layer != 6 && collider.gameObject.layer != 7)
         {
-            collidersInside.Add(other);
+          if (collider.gameObject.layer != 6 && collider.gameObject.layer != 7)
+          {
+            collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
 
-            if (IsColliderCompletelyInside(other))
-            {
-                //do something
-            }
+          }
         }
-    }
+        else
+          collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
 
-    private void OnTriggerExit2D(Collider2D other)
+      }
+    }
+  }
+  public void PaintOnUnfreeze()
+  {
+    Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("Default", "Ground", "Wall"));
+    foreach (Collider2D collider in colliders)
     {
-        if (collidersInside.Contains(other))
+      if (!collider.gameObject.CompareTag("Player"))
+      {
+        Debug.Log(collider.gameObject.name);
+
+        if (collider.gameObject.tag != "Background")
         {
-            collidersInside.Remove(other);
+          if (collider.gameObject.layer != 6 && collider.gameObject.layer != 7)
+          {
+            collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+
+          }
         }
+
+        else
+          collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
+
+      }
     }
-
-
-
-    private bool IsColliderCompletelyInside(Collider2D collider)
-    {
-        Collider2D triggerCollider = GetComponent<Collider2D>();
-
-        Bounds triggerBounds = triggerCollider.bounds;
-        Bounds colliderBounds = collider.bounds;
-
-        return triggerBounds.Contains(colliderBounds.min) && triggerBounds.Contains(colliderBounds.max);
-    }
-
-    public void FreezeTimeStoppableEntities()
-    {
-        foreach (Collider2D collider in collidersInside)
-        {
-            TimeStoppableEntity timeStoppableEntity = collider.GetComponent<TimeStoppableEntity>();
-
-            if (timeStoppableEntity != null)
-                timeStoppableEntity.ToggleTime();
-        }
-    }
+  }
 }
