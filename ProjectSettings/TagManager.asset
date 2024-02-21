@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Killer
-  - Background
   layers:
   - Default
   - TransparentFX
@@ -15,7 +14,7 @@ TagManager:
   - UI
   - Ground
   - Wall
-  - 
+  - BehindFrozenPlane
   - 
   - 
   - 
@@ -42,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Game
+    uniqueID: 857593069
+    locked: 0
+  - name: FrozenPlane
+    uniqueID: 1277490231
+    locked: 0
+  - name: Player
+    uniqueID: 440738327
+    locked: 0
+  - name: UI
+    uniqueID: 3657125503
     locked: 0
