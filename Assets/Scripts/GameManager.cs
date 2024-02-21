@@ -68,6 +68,8 @@ public class GameManager : MonoBehaviour
   }
   public bool FreezeSection(int gridX, int gridY)
   {
+    //Get the selection border class from hoverborderinstance
+    SelectionBorder selectionBorder = hoverBorderInstance.GetComponent<SelectionBorder>();
     Vector2[,] grid = GetGrid();
     Vector2 borderPosition = grid[gridY, gridX];
     foreach (GameObject border in activatedBorderInstances)
@@ -78,6 +80,7 @@ public class GameManager : MonoBehaviour
         activatedBorderInstances.Remove(border);
         Destroy(border);
         print("Unfreezed Section" + gridX + " " + gridY);
+        selectionBorder.FreezeTimeStoppableEntities();
 
         return false;
       }
@@ -86,6 +89,8 @@ public class GameManager : MonoBehaviour
     GameObject activeBorderInstance = Instantiate(activeBorderPrefab, borderPosition, Quaternion.identity);
     activatedBorderInstances.Add(activeBorderInstance);
     print("Freezed Section" + gridX + " " + gridY);
+    selectionBorder.FreezeTimeStoppableEntities();
+
     return true;
 
   }
