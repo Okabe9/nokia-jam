@@ -1357,6 +1357,20 @@ MonoBehaviour:
   - {x: 20, y: -8}
   hoverBorderPrefab: {fileID: 6341809145179985251, guid: 66460cdb57d3e2743adfa5e9219f921e, type: 3}
   activeBorderPrefab: {fileID: 7216940893733552156, guid: 7245b641f4e74f24d85e343d6972ae7b, type: 3}
+  palletes:
+  - foregroundColor: {r: 0.2627451, g: 0.32156864, b: 0.2392157, a: 1}
+    backgroundColor: {r: 0.78039217, g: 0.9411765, b: 0.84705883, a: 1}
+  - foregroundColor: {r: 0.16862746, g: 0.24705882, b: 0.03529412, a: 1}
+    backgroundColor: {r: 0.60784316, g: 0.78039217, b: 0, a: 1}
+  - foregroundColor: {r: 0.101960786, g: 0.09803922, b: 0.078431375, a: 1}
+    backgroundColor: {r: 0.5294118, g: 0.5686275, b: 0.53333336, a: 1}
+  - foregroundColor: {r: 0.7803922, g: 0.94117653, b: 0.8470589, a: 1}
+    backgroundColor: {r: 0.2627451, g: 0.32156864, b: 0.2392157, a: 1}
+  - foregroundColor: {r: 0.60784316, g: 0.7803922, b: 0, a: 1}
+    backgroundColor: {r: 0.16862746, g: 0.24705884, b: 0.03529412, a: 1}
+  - foregroundColor: {r: 0.5294118, g: 0.5686275, b: 0.53333336, a: 1}
+    backgroundColor: {r: 0.10196079, g: 0.098039225, b: 0.078431375, a: 1}
+  currentPalleteIndex: 0
 --- !u!4 &1633495572
 Transform:
   m_ObjectHideFlags: 0

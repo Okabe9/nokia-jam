@@ -40,7 +40,11 @@ public class PlayerInput : MonoBehaviour
     {
       gridX = (gridX + 1) % 3;
       UpdateBorderPosition();
-
+    }
+    if (Input.GetKeyDown(KeyCode.Z))
+    {
+      GameManager.instance.currentPalleteIndex = (GameManager.instance.currentPalleteIndex + 1) % 6;
+      GameManager.instance.SpritePainting();
     }
   }
   void UpdateBorderPosition()
