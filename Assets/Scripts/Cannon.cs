@@ -11,7 +11,6 @@ public class Cannon : MonoBehaviour
 
     private float spawnTimer = 0;
 
-    // Update is called once per frame
     void Update()
     {
         if(spawnTimer > 0)

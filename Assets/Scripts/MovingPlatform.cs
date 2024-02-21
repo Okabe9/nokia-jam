@@ -29,20 +29,10 @@ public class MovingPlatform : TimeStoppableEntity
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.GetComponent<LemmingController>().Death();
-        }
-    }
-
     private void EntityMovement()
     {
         if (timeRemaining > 0)
-        {
             timeRemaining -= Time.deltaTime;
-        }
         else
         {
             MoveToNextPatrolPoint();
@@ -52,29 +42,52 @@ public class MovingPlatform : TimeStoppableEntity
 
     private void MoveToNextPatrolPoint()
     {
+        CheckPatrolBounds();
 
+        Vector2 nextDirection = patrolPoints[patrolTargetPoint] - new Vector2(transform.position.x, transform.position.y);
+        nextDirection = new Vector2(nextDirection.x > 0 ? 1 : nextDirection.x < 0 ? -1 : 0, nextDirection.y > 0 ? 1 : nextDirection.y < 0 ? -1 : 0);
+
+        if (nextDirection == Vector2.zero)
+            patrolTargetPoint += 1 * patrolDirection;
+
+        CheckPatrolBounds();
+
+        //Move one unit forward
+        transform.position += new Vector3(nextDirection.x, nextDirection.y, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Killer") && !collision.gameObject.CompareTag("Player"))
+        {
+            patrolTargetPoint -= 1 * patrolDirection;
+            patrolDirection *= -1;
+
+            CheckPatrolBounds();
+
+            Vector2 nextDirection = patrolPoints[patrolTargetPoint] - new Vector2(transform.position.x, transform.position.y);
+            nextDirection = new Vector2(nextDirection.x > 0 ? 1 : nextDirection.x < 0 ? -1 : 0, nextDirection.y > 0 ? 1 : nextDirection.y < 0 ? -1 : 0);
+
+
+            if (nextDirection == Vector2.zero)
+                patrolTargetPoint += 1 * patrolDirection;
+        }
+    }
+
+    private void CheckPatrolBounds()
+    {
         // Loops patrol points
-        if (patrolTargetPoint >= patrolPoints.Count || patrolTargetPoint < 0)
+        if (patrolTargetPoint >= patrolPoints.Count)
         {
             if (pingPongMovement)
             {
                 patrolTargetPoint -= 2 * patrolDirection;
                 patrolDirection *= -1;
-            } else                 
+            }
+            else
                 patrolTargetPoint = 0;
         }
-
-        
-        Vector2 nextDirection = patrolPoints[patrolTargetPoint] - new Vector2(transform.position.x, transform.position.y);
-
-        nextDirection = new Vector2(nextDirection.x > 0 ? 1 : nextDirection.x < 0 ? -1 : 0, nextDirection.y > 0 ? 1 : nextDirection.y < 0 ? -1 : 0);
-
-
-        if (nextDirection == Vector2.zero)
-            patrolTargetPoint += 1 * patrolDirection;
-
-
-        //Move one unit forward
-        transform.position += new Vector3(nextDirection.x, nextDirection.y, 0);
+        else if (patrolTargetPoint < 0)
+            patrolTargetPoint = patrolPoints.Count - 1;
     }
 }

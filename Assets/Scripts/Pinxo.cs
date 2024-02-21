@@ -23,13 +23,7 @@ public class Pinxo : TimeStoppableEntity
             EntityMovement();
 
   }
-  private void OnTriggerEnter2D(Collider2D other)
-  {
-    if (other.gameObject.CompareTag("Player"))
-    {
-      other.gameObject.GetComponent<LemmingController>().Death();
-    }
-  }
+  
   private void EntityMovement()
   {
     if (timeRemaining > 0)
@@ -42,14 +36,12 @@ public class Pinxo : TimeStoppableEntity
       //Move spike vertically
       this.transform.position += new Vector3(0, verticalMovement, 0);
       verticalMovement *= -1;
+
       if (verticalMovement == 2)
-      {
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
-      }
       else
-      {
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
-      }
+
       timeRemaining = activationTime;
     }
   }

@@ -11,7 +11,7 @@ public enum BulletDirection
 }
 
 
-public class Bullet : MonoBehaviour
+public class Bullet : TimeStoppableEntity
 {
 
     [HideInInspector] public BulletDirection direction;
@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
     {
         if(bulletMoveTimer > 0)
             bulletMoveTimer -= Time.deltaTime;
-        else
+        else if(!isTimeStopped)
         {
             //Move one unit forward
             switch(direction)
@@ -50,9 +50,6 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-            collision.gameObject.GetComponent<LemmingController>().Death();
-
         Destroy(this.gameObject);
     }
 }

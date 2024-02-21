@@ -6,6 +6,7 @@ public class TP : MonoBehaviour
 {
     [SerializeField] private GameObject targetTP;
     [HideInInspector] public bool isTPActive = true;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && isTPActive)
