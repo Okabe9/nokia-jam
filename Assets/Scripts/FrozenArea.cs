@@ -17,6 +17,10 @@ public class FrozenArea : MonoBehaviour
 
         foreach (Collider2D collider in colliders)
         {
+            // Skip Selection Border
+            if (collider.gameObject.layer == LayerMask.NameToLayer("SelectionBorder"))
+                continue;
+
             // Render Layer Handling
             if (!collidersInside.Contains(collider) && !collider.gameObject.CompareTag("Player"))
             {
@@ -29,6 +33,10 @@ public class FrozenArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        // Skip Selection Border
+        if (collider.gameObject.layer == LayerMask.NameToLayer("SelectionBorder"))
+            return;
+
         TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
 
         // Collider Layer Handling
@@ -49,6 +57,10 @@ public class FrozenArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
+        // Skip Selection Border
+        if (collider.gameObject.layer == LayerMask.NameToLayer("SelectionBorder"))
+            return;
+
         TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
 
         // Collider Layer Handling
@@ -70,6 +82,8 @@ public class FrozenArea : MonoBehaviour
         // Collider Layer Handling
         foreach (Collider2D collider in collidersInBack)
         {
+            if(collider == null) continue;
+
             TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
 
             if (layerIDs.ContainsKey(collider.gameObject.name) && !otherTStoppable.isTransitioningBehindFreeze)
@@ -80,6 +94,8 @@ public class FrozenArea : MonoBehaviour
         int i = 0;
         foreach (Collider2D collider in collidersInside)
         {
+            if(collider == null) continue;
+
             collider.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = sortingLayersNames[i];
             i++;
         }
