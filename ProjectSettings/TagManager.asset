@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Killer
+  - Background
+  - ColorChangeShader
   layers:
   - Default
   - TransparentFX
