@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ChangeCOlor
+  m_Name: ChangeColor
   m_Shader: {fileID: -6465566751694194690, guid: 9b9283099cb7f9f4aae416a6468d2ddd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -70,10 +70,10 @@ Material:
     - _DIRECTION: 2
     - _EnableExternalAlpha: 0
     m_Colors:
-    - _BackgroundColor: {r: 0.12757692, g: 0.053666778, b: 0.16981131, a: 0}
+    - _BackgroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _ForegroundColor: {r: 0.6698113, g: 0.5276344, b: 0.54810786, a: 0}
+    - _ForegroundColor: {r: 0, g: 0, b: 0, a: 0}
     - _FromBackgroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _FromForegroundColor: {r: 0, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
