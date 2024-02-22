@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Killer
   - Background
+  - ColorChangeShader
+
   layers:
   - Default
   - TransparentFX
