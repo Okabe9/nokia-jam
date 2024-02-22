@@ -37,12 +37,12 @@ public class Pinxo : TimeStoppableEntity
             if (gameObject.GetComponent<SpriteRenderer>().sprite == spikeUpSprite)
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = spikeDownSprite;
-                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
             }
             else
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = spikeUpSprite;
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
             }
 
             timeRemaining = activationTime;

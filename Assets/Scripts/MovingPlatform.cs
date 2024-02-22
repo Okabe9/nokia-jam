@@ -58,7 +58,7 @@ public class MovingPlatform : TimeStoppableEntity
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag("Killer") && !collision.gameObject.CompareTag("Player"))
+        if (!collision.gameObject.CompareTag("Killer") && !collision.gameObject.CompareTag("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Background"))
         {
             patrolTargetPoint -= 1 * patrolDirection;
             patrolDirection *= -1;
