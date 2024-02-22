@@ -11,13 +11,13 @@ public class FrozenArea : MonoBehaviour
 
     private Dictionary<string, int> layerIDs = new Dictionary<string, int>();
 
-
     private void Start()
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("Default", "Ground", "Wall"));
 
         foreach (Collider2D collider in colliders)
         {
+            // Render Layer Handling
             if (!collidersInside.Contains(collider) && !collider.gameObject.CompareTag("Player"))
             {
                 collidersInside.Add(collider);
@@ -29,10 +29,16 @@ public class FrozenArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
+
+        // Collider Layer Handling
+        if (collider.gameObject.layer == LayerMask.NameToLayer("BehindFrozenPlane"))
+            otherTStoppable.isTransitioningBehindFreeze  = true;
+
         if (!collidersInside.Contains(collider))
         {
             if (!layerIDs.ContainsKey(collider.gameObject.name))
-                layerIDs.Add(collider.gameObject.name, collider.gameObject.layer);
+                layerIDs.Add(collider.gameObject.name, otherTStoppable.originalLayer);
 
             if (!collidersInBack.Contains(collider))
                 collidersInBack.Add(collider);
@@ -43,7 +49,10 @@ public class FrozenArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (layerIDs.ContainsKey(collider.gameObject.name))
+        TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
+
+        // Collider Layer Handling
+        if (layerIDs.ContainsKey(collider.gameObject.name) && !otherTStoppable.isTransitioningBehindFreeze)
         {
             collider.gameObject.layer = layerIDs[collider.gameObject.name];
             layerIDs.Remove(collider.gameObject.name);
@@ -51,16 +60,23 @@ public class FrozenArea : MonoBehaviour
 
         if (collidersInBack.Contains(collider))
             collidersInBack.Remove(collider);
+
+        if (collider.gameObject.layer == LayerMask.NameToLayer("BehindFrozenPlane"))
+            otherTStoppable.isTransitioningBehindFreeze = false;
     }
 
     private void OnDestroy()
     {
+        // Collider Layer Handling
         foreach (Collider2D collider in collidersInBack)
         {
-            if (layerIDs.ContainsKey(collider.gameObject.name))
+            TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
+
+            if (layerIDs.ContainsKey(collider.gameObject.name) && !otherTStoppable.isTransitioningBehindFreeze)
                 collider.gameObject.layer = layerIDs[collider.gameObject.name];
         }
 
+        // Render Layer Handling
         int i = 0;
         foreach (Collider2D collider in collidersInside)
         {
