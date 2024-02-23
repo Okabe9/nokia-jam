@@ -18,7 +18,7 @@ public class LemmingController : TimeStoppableEntity
     private Vector3 previousVelocity;
     private float previousAngularVelocity;
 
-    private bool isManuallyFrozen = false;
+    private bool isManuallyFrozen = true;
 
     [SerializeField] private float freezeCooldownTime = 2f;
     private float freezeCooldownTimer = 0f;
@@ -127,6 +127,65 @@ public class LemmingController : TimeStoppableEntity
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+        {
+            int vertical = 0;
+            int horizontal = 0;
+            float threshold = 0.85f;
+
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                Vector2 direction = contact.point - (Vector2)transform.position;
+
+                direction.Normalize();
+
+                if (Vector2.Dot(direction, Vector2.up) > threshold)
+                {
+                    vertical++;
+                }
+                else if (Vector2.Dot(direction, Vector2.down) > threshold)
+                {
+                    vertical--;
+                }
+                else if (Vector2.Dot(direction, Vector2.right) > threshold)
+                {
+                    horizontal++;
+                }
+                else if (Vector2.Dot(direction, Vector2.left) > threshold)
+                {
+                    horizontal--;
+                }
+            }
+
+            if(vertical > 0)
+            {
+                //Up Collision
+            }
+            else if(vertical < 0)
+            {
+                //Down Collision
+            }
+            else if(horizontal > 0)
+            {
+                //Right Collision
+                currentDirection *= -1;
+                transform.localScale = new Vector3(currentDirection, 1, 1);
+                gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+            }
+            else if(horizontal < 0)
+            {
+                //Left Collision
+                currentDirection *= -1;
+                transform.localScale = new Vector3(currentDirection, 1, 1);
+                gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            }
+        }
+    }
+    
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Killer"))
@@ -140,6 +199,8 @@ public class LemmingController : TimeStoppableEntity
             if (isTimeStopped)
                 isTimeStopped = false;
         }
+
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)

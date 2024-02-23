@@ -12,8 +12,13 @@ public class Spring : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceX, forceY));
-            gameObject.GetComponent<Animator>().SetTrigger("Activate");
+            other.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+            if (other.gameObject.transform.position.x - transform.position.x >= 0)
+                other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceX, forceY));
+            else
+                other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceX, forceY));
         }
     }
+
 }
