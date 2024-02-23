@@ -21,7 +21,7 @@ public class Pinxo : TimeStoppableEntity
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!isTimeStopped && !dontHide)
             EntityMovement();

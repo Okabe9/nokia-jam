@@ -29,6 +29,16 @@ public class LemmingController : TimeStoppableEntity
 
         if (!isTimeStopped)
             EntityMovement();
+
+        
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("ActiveBorder"));
+
+
+        if (colliders.Length > 0)
+            gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
+        else
+            gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+        
     }
 
     bool WallInFront()
@@ -57,9 +67,9 @@ public class LemmingController : TimeStoppableEntity
         }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
+
         if (collision.gameObject.CompareTag("Killer"))
             Death();
     }

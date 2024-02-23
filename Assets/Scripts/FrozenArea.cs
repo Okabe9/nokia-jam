@@ -33,8 +33,8 @@ public class FrozenArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        // Skip Selection Border
-        if (collider.gameObject.layer == LayerMask.NameToLayer("SelectionBorder"))
+        // Skip Selection Border and Player (later will add if it is on platform go behind plane)
+        if (collider.gameObject.layer == LayerMask.NameToLayer("SelectionBorder") || collider.gameObject.CompareTag("Player"))
             return;
 
         TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
@@ -57,8 +57,8 @@ public class FrozenArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        // Skip Selection Border
-        if (collider.gameObject.layer == LayerMask.NameToLayer("SelectionBorder"))
+        // Skip Selection Border and Player (later will add if it is on platform go behind plane)
+        if (collider.gameObject.layer == LayerMask.NameToLayer("SelectionBorder") || collider.gameObject.CompareTag("Player"))
             return;
 
         TimeStoppableEntity otherTStoppable = collider.gameObject.GetComponent<TimeStoppableEntity>();
