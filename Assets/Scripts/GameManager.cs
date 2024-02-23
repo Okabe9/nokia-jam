@@ -138,6 +138,7 @@ public class GameManager : MonoBehaviour
   }
   public void RestartLevel()
   {
+    AudioManager.instance.PlaySFX("StartLevel");
     Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
   }
 }

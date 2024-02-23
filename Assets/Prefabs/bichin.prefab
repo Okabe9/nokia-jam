@@ -172,11 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63501fa007824a549b5f227fa89d2a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTimeStopped: 0
+  isTimeStopped: 1
   isTransitioningBehindFreeze: 0
   originalLayer: 0
   walkTime: 0.1
   lemming: {fileID: 0}
+  freezeCooldownTime: 2
 --- !u!95 &1547401646223475617
 Animator:
   serializedVersion: 5
