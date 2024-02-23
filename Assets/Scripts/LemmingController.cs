@@ -10,7 +10,7 @@ public class LemmingController : TimeStoppableEntity
   [SerializeField] private float walkTime = 0.2f;
   [SerializeField] private Vector2 startingPosition = new Vector2(0, 0);
   [SerializeField] private float feetOffset = 4f;
-  [SerializeField] private float heightOffset = 4f;
+  [SerializeField] private float heightOffset;
   [SerializeField] private float fallSpeed = 1;
 
   // Start is called before the first frame update
@@ -85,14 +85,14 @@ public class LemmingController : TimeStoppableEntity
   {
 
     Vector2 rcPosLeft = new Vector2(transform.position.x - feetOffset, transform.position.y);
-    bool leftGrounded = Physics2D.Raycast(rcPosLeft, Vector2.down, -heightOffset, LayerMask.GetMask("Ground"));
+    bool leftGrounded = Physics2D.Raycast(rcPosLeft, Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
     Debug.DrawRay(rcPosLeft, new Vector2(0, -heightOffset), Color.white);
 
     Vector2 rcPosRight = new Vector2(transform.position.x + feetOffset, transform.position.y);
-    bool rightGrounded = Physics2D.Raycast(rcPosRight, Vector2.down, -heightOffset, LayerMask.GetMask("Ground"));
+    bool rightGrounded = Physics2D.Raycast(rcPosRight, Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
     Debug.DrawRay(rcPosRight, new Vector2(0, -heightOffset), Color.white);
 
-    bool centerGrounded = Physics2D.Raycast(transform.position, Vector2.down, -heightOffset, LayerMask.GetMask("Ground"));
+    bool centerGrounded = Physics2D.Raycast(transform.position, Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
     Debug.DrawRay(transform.position, new Vector2(0, -heightOffset), Color.white);
 
 

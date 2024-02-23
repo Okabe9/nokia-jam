@@ -178,5 +178,5 @@ MonoBehaviour:
   walkTime: 0.1
   startingPosition: {x: -20, y: 11}
   feetOffset: 3
-  heightOffset: 6
+  heightOffset: 0
   fallSpeed: 0.1
