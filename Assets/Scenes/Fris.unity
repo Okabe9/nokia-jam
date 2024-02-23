@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 222317651}
   - component: {fileID: 222317650}
   - component: {fileID: 222317649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bichin
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -975,11 +975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.5
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1101,11 +1101,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1639,11 +1639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1696,11 +1696,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1838,11 +1838,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2480,6 +2480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 907963499}
   - component: {fileID: 907963498}
+  - component: {fileID: 907963500}
   m_Layer: 0
   m_Name: Borders (1)
   m_TagString: Untagged
@@ -2554,6 +2555,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &907963500
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907963497}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 41.5, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 84, y: 48}
+    newSize: {x: 84, y: 48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 48}
+  m_EdgeRadius: 0
 --- !u!1001 &908211001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2568,11 +2614,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3658,7 +3704,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1646909971}
   - component: {fileID: 1646909970}
-  m_Layer: 0
+  - component: {fileID: 1646909972}
+  m_Layer: 7
   m_Name: Borders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3732,6 +3779,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1646909972
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646909969}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -33.5, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 84, y: 48}
+    newSize: {x: 84, y: 48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 17, y: 48}
+  m_EdgeRadius: 0
 --- !u!1001 &1662813626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3746,11 +3838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3685456704338896646, guid: 379eee8c2bcabe54589ca08911711992, type: 3}
       propertyPath: m_LocalPosition.z
