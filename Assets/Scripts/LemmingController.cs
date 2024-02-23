@@ -14,6 +14,8 @@ public class LemmingController : TimeStoppableEntity
     private Vector3 previousVelocity;
     private float previousAngularVelocity;
 
+    private bool isManuallyFrozen = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,29 +29,30 @@ public class LemmingController : TimeStoppableEntity
         {
             Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
 
-            if (!isTimeStopped)
+            if (!isManuallyFrozen)
             {
-                isTimeStopped = true;
+                isManuallyFrozen = true;
 
-                // Store current velocity and angular velocity
                 previousVelocity = rb.velocity;
                 rb.velocity = Vector2.zero;
 
-                // Freeze the Rigidbody to pause movement
                 rb.isKinematic = true;
             }
             else
             {
+                isManuallyFrozen = false;
                 isTimeStopped = false;
 
-                // Enable the Rigidbody2D to resume movement
                 rb.bodyType = RigidbodyType2D.Dynamic;
-
-                // Reapply previous velocity
                 rb.velocity = previousVelocity;
             }
-
         }
+
+        print("");
+
+        if (isManuallyFrozen)
+            isTimeStopped = true;
+
 
         if (WallInFront())
         {
@@ -62,13 +65,15 @@ public class LemmingController : TimeStoppableEntity
             EntityMovement();
 
         
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("ActiveBorder"));
+        if(gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("ActiveBorder"));
 
-
-        if (colliders.Length > 0)
-            gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
-        else
-            gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+            if (colliders.Length > 0)
+                gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
+            else
+                gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+        }
 
     }
 
@@ -100,9 +105,23 @@ public class LemmingController : TimeStoppableEntity
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-
         if (collision.gameObject.CompareTag("Killer"))
             Death();
+
+        if (collision.gameObject.CompareTag("MovingPlatform") && !collision.gameObject.GetComponent<TimeStoppableEntity>().isTimeStopped)
+            gameObject.layer = collision.gameObject.layer;
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("Player");
+            if (isTimeStopped)
+                isTimeStopped = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MovingPlatform"))
+            gameObject.layer = LayerMask.NameToLayer("Player");
     }
 
 }
