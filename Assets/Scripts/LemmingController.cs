@@ -11,6 +11,9 @@ public class LemmingController : TimeStoppableEntity
     [SerializeField]
     Vector2 startingPosition = new Vector2(0, 0);
 
+    private Vector3 previousVelocity;
+    private float previousAngularVelocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,34 @@ public class LemmingController : TimeStoppableEntity
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+
+            if (!isTimeStopped)
+            {
+                isTimeStopped = true;
+
+                // Store current velocity and angular velocity
+                previousVelocity = rb.velocity;
+                rb.velocity = Vector2.zero;
+
+                // Freeze the Rigidbody to pause movement
+                rb.isKinematic = true;
+            }
+            else
+            {
+                isTimeStopped = false;
+
+                // Enable the Rigidbody2D to resume movement
+                rb.bodyType = RigidbodyType2D.Dynamic;
+
+                // Reapply previous velocity
+                rb.velocity = previousVelocity;
+            }
+
+        }
+
         if (WallInFront())
         {
             //Change direction
@@ -38,7 +69,7 @@ public class LemmingController : TimeStoppableEntity
             gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
         else
             gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
-        
+
     }
 
     bool WallInFront()
