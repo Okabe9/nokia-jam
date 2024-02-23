@@ -25,15 +25,7 @@ public class AudioManager : MonoBehaviour
     // Find the AudioSource for music on the same GameObject
     audioSource = GetComponent<AudioSource>();
 
-    // Assign each sound effect clip to its respective AudioSource
-    foreach (Sound s in soundEffects)
-    {
-      s.source = gameObject.AddComponent<AudioSource>();
-      s.source.clip = s.clip;
-      s.source.volume = s.volume;
-      s.source.pitch = s.pitch;
-      s.source.loop = s.loop;
-    }
+
   }
 
 
