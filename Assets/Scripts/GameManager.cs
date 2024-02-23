@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
   [SerializeField] GameObject hoverBorderPrefab;
   [SerializeField] GameObject activeBorderPrefab;
 
+  [SerializeField] Vector2 lemmingStartingPosition = new Vector2(0, 0);
+  [SerializeField] private GameObject lemming;
+
+
   private GameObject hoverBorderInstance;
   private List<GameObject> activatedBorderInstances = new List<GameObject>();
 
@@ -130,8 +134,10 @@ public class GameManager : MonoBehaviour
           go.GetComponent<SpriteRenderer>().color = palletes[currentPalleteIndex].backgroundColor;
         }
       }
-
     }
-
+  }
+  public void RestartLevel()
+  {
+    Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
   }
 }
