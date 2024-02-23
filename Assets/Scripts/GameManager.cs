@@ -111,7 +111,14 @@ public class GameManager : MonoBehaviour
     {
       SpriteRenderer spriteRenderer = go.GetComponent<SpriteRenderer>();
 
-      if (spriteRenderer != null)
+      if (go.tag == "ColorChange")
+      {
+        Material material = spriteRenderer.material;
+        material.SetColor("_ForegroundColor", palletes[currentPalleteIndex].foregroundColor);
+        material.SetColor("_BackgroundColor", palletes[currentPalleteIndex].backgroundColor);
+
+      }
+      else if (spriteRenderer != null && go.tag != "ColorChange")
       {
         if (go.tag != "Background")
         {
@@ -123,6 +130,7 @@ public class GameManager : MonoBehaviour
           go.GetComponent<SpriteRenderer>().color = palletes[currentPalleteIndex].backgroundColor;
         }
       }
+
     }
 
   }
