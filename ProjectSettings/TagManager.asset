@@ -7,6 +7,7 @@ TagManager:
   - Killer
   - Background
   - ColorChange
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
