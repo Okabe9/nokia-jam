@@ -67,11 +67,12 @@ public class LemmingController : TimeStoppableEntity
       //Move one unit forward
       transform.position += new Vector3(currentDirection, 0, 0);
       timeRemaining = walkTime;
+      if (!isGrounded())
+      {
+        transform.position -= new Vector3(0, fallSpeed, 0);
+      }
     }
-    if (!isGrounded())
-    {
-      transform.position -= new Vector3(0, fallSpeed, 0);
-    }
+
   }
 
   private void OnCollisionStay2D(Collision2D collision)
@@ -98,4 +99,39 @@ public class LemmingController : TimeStoppableEntity
 
     return leftGrounded || rightGrounded || centerGrounded;
   }
+  /* private void JumpingLogic()
+  {
+    // Check if the player is on the ground
+    character.isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, groundRayDistance, groundMask);
+
+    //Set jumpVelocity negative so we don't get errors with positive velocities
+    if (character.isGrounded && jumpVelocity.y < 0)
+      jumpVelocity.y = -2f;
+
+    //In-air logic
+    if (jumpVelocity.y >= 0.3f)
+    {
+      character.isGrounded = false;
+      jumpVelocity.y += (gravity - jumpVelocity.y) * Time.deltaTime;
+
+    }
+    else if (jumpVelocity.y < 0.3f && jumpVelocity.y >= 0f)
+      jumpVelocity.y += gravity / 4f * Time.deltaTime;
+    else
+      jumpVelocity.y += (gravity - jumpVelocity.y * jumpVelocity.y / 5f) * 1.5f * Time.deltaTime;
+
+    // Move vertically
+    characterController.Move(jumpVelocity * Time.deltaTime);
+  }
+
+  private void Jump()
+  {
+    // Set States
+    character.isGrounded = false;
+    jumpVelocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+    inputManager.bufferedAction = BufferActions.CLEAR;
+
+    // Set Animation
+    character.animator.SetTrigger(character.animKeys.jumpTriggerKey);
+  } */
 }
