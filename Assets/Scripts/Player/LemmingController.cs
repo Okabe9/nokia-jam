@@ -53,22 +53,12 @@ public class LemmingController : TimeStoppableEntity
                 AudioManager.instance.PlaySFX("FreezeLemming");
                 animator.speed = 0;
 
-                if (!snappedToPlatform)
-                {
-                    previousVelocity = rb.velocity;
-                    rb.velocity = Vector2.zero;
-
-                    rb.isKinematic = true;
-                }
             }
             else if(isGrounded)
             {
                 isManuallyFrozen = false;
                 isTimeStopped = false;
                 AudioManager.instance.PlaySFX("UnfreezeLemming");
-
-                rb.bodyType = RigidbodyType2D.Dynamic;
-                rb.velocity = previousVelocity;
 
                 freezeCooldownTimer = freezeCooldownTime;
                 animator.speed = 1;
@@ -85,6 +75,9 @@ public class LemmingController : TimeStoppableEntity
 
         if (WallInFront())
         {
+            if (snappedToPlatform)
+                return;
+
             //Change direction
             currentDirection *= -1;
             FlipHorizontally();
@@ -97,20 +90,26 @@ public class LemmingController : TimeStoppableEntity
         transform.localScale = new Vector3(currentDirection, 1, 1);
 
 
-        if (gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (gameObject.layer == LayerMask.NameToLayer("Player") || gameObject.layer == LayerMask.NameToLayer("Default"))
         {
             Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("ActiveBorder"));
 
             if (colliders.Length > 0)
                 gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
             else
+            {
                 gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+
+                if (isManuallyFrozen && snappedToPlatform && isTimeStopped)
+                    isTimeStopped = false;
+            }
         }
 
     }
 
     bool WallInFront()
     {
+        
         bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall", "Ground"));
         Debug.DrawRay(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection * 4, 0), Color.red);
 
@@ -140,66 +139,25 @@ public class LemmingController : TimeStoppableEntity
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
-    //    {
-    //        int vertical = 0;
-    //        int horizontal = 0;
-    //        float threshold = 0.85f;
+    private void CheckForPlatform()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall", "Ground"));
 
-    //        foreach (ContactPoint2D contact in collision.contacts)
-    //        {
-    //            Vector2 direction = contact.point - (Vector2)transform.position;
+        if (isManuallyFrozen)
+        {
+            Vector2 platformDirection = hit.collider.gameObject.GetComponent<MovingPlatform>().currentMovementDirection;
+            if (platformDirection.x != 0)
+            {
+                if (currentDirection != Mathf.RoundToInt(platformDirection.x))
+                {
+                    FlipHorizontally();
+                    transform.position = new Vector3(transform.position.x - 3 * currentDirection, transform.position.y, 0);
+                }
 
-    //            direction.Normalize();
-
-    //            if (Vector2.Dot(direction, Vector2.up) > threshold)
-    //            {
-    //                vertical++;
-    //            }
-    //            else if (Vector2.Dot(direction, Vector2.down) > threshold)
-    //            {
-    //                vertical--;
-    //            }
-    //            else if (Vector2.Dot(direction, Vector2.right) > threshold)
-    //            {
-    //                horizontal++;
-    //            }
-    //            else if (Vector2.Dot(direction, Vector2.left) > threshold)
-    //            {
-    //                horizontal--;
-    //            }
-    //        }
-
-    //        if (vertical > 0)
-    //        {
-    //            //Up Collision
-    //        }
-    //        else if (vertical < 0)
-    //        {
-    //            //Down Collision
-    //        }
-    //        else if (horizontal > 0)
-    //        {
-    //            //Right Collision
-    //            currentDirection *= -1;
-    //            transform.localScale = new Vector3(currentDirection, 1, 1);
-    //            transform.position = new Vector3(Mathf.RoundToInt(transform.position.x - (5f * currentDirection)), transform.position.y);
-    //            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
-    //        }
-    //        else if (horizontal < 0)
-    //        {
-    //            //Left Collision
-    //            currentDirection *= -1;
-    //            transform.localScale = new Vector3(currentDirection, 1, 1);
-    //            transform.position = new Vector3(Mathf.RoundToInt(transform.position.x - (5f * currentDirection)), transform.position.y);
-    //            gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-    //        }
-    //    }
-    //}
-
+                currentDirection = Mathf.RoundToInt(platformDirection.x);
+            }
+        }
+    }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -211,9 +169,9 @@ public class LemmingController : TimeStoppableEntity
             gameObject.layer = collision.gameObject.layer;
             snappedToPlatform = true;
 
-            if(isManuallyFrozen)
+            if (isManuallyFrozen)
             {
-                Vector2 platformDirection = collision.gameObject.GetComponent<MovingPlatform>().currentMovementDirection;
+                Vector2 platformDirection = collision.collider.gameObject.GetComponent<MovingPlatform>().currentMovementDirection;
                 if (platformDirection.x != 0)
                 {
                     if (currentDirection != Mathf.RoundToInt(platformDirection.x))
