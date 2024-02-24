@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f4dd8956de7eea14a97f04c855197d53
+guid: b1111308f3b9bcc4dbe2eeb778ed95da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level3background_0
+      name: level3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d1d9763368ca8e4bbfb79a2fd51cd92
-      internalID: -660162331
+      spriteID: 82901e7f5500c6d40817e63a1b6ba818
+      internalID: 47860308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3background_1
+      name: level3_1
       rect:
         serializedVersion: 2
         x: 22
         y: 32
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6e1d10c38000f4c89268dee6292a29
-      internalID: -822290525
+      spriteID: d0feaa2aca420f0458927e29d56ecfc7
+      internalID: 738119081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3background_2
+      name: level3_2
       rect:
         serializedVersion: 2
         x: 44
         y: 32
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72bfaf935ca457e46a451d8a305157f5
-      internalID: -20734461
+      spriteID: eeafaa320b8528349a38e3447ea7dc84
+      internalID: 1151492476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3background_3
+      name: level3_3
       rect:
         serializedVersion: 2
         x: 0
         y: 16
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b60a8c95c151dce4894662610eb16c5a
-      internalID: 215018851
+      spriteID: 9ed5c24fee14e7941af591bc37ce953e
+      internalID: 1728049333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3background_4
+      name: level3_4
       rect:
         serializedVersion: 2
         x: 44
         y: 16
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57b286eef2124cf4e83315c13aa536b1
-      internalID: -1001503221
+      spriteID: f4d1290ef3a37364db06740906d79411
+      internalID: -941531491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3background_5
+      name: level3_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 716efdcccb4fe514fa7151813f89a56b
-      internalID: 966288839
+      spriteID: 14800777d765a024cab0f1986908012a
+      internalID: -521968838
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3background_6
+      name: level3_6
       rect:
         serializedVersion: 2
         x: 22
         y: 0
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32817fe4361f8114ebbf430857ba8388
-      internalID: -1145697769
+      spriteID: 12b5e234f00df7a45b9079b816472425
+      internalID: -1934834142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3background_7
+      name: level3_7
       rect:
         serializedVersion: 2
         x: 44
         y: 0
-        width: 22.333334
+        width: 22
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1077fab41044f2c469a3493a16154125
-      internalID: 1003160675
+      spriteID: 5fde9daaf41cede48bdc5e02b99409fc
+      internalID: -1108879075
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      level3background_0: -660162331
-      level3background_1: -822290525
-      level3background_2: -20734461
-      level3background_3: 215018851
-      level3background_4: -1001503221
-      level3background_5: 966288839
-      level3background_6: -1145697769
-      level3background_7: 1003160675
+      level3_0: 47860308
+      level3_1: 738119081
+      level3_2: 1151492476
+      level3_3: 1728049333
+      level3_4: -941531491
+      level3_5: -521968838
+      level3_6: -1934834142
+      level3_7: -1108879075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
