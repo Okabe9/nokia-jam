@@ -40,9 +40,11 @@ public class LemmingController : TimeStoppableEntity
     // Update is called once per frame
     void Update()
     {
+            isGrounded = IsGrounded();
         if (Input.GetKeyDown(KeyCode.F))
         {
-            isGrounded = IsGrounded();
+
+            print(isGrounded);
 
             Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
 
@@ -225,16 +227,9 @@ public class LemmingController : TimeStoppableEntity
         LayerMask groundLayer = LayerMask.NameToLayer("Ground");
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
 
-        bool centerGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(-collider.offset.x, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
-        Debug.DrawRay(transform.position + new Vector3(-collider.offset.x, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
+        bool centerGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(collider.offset.x * currentDirection, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(transform.position + new Vector3(collider.offset.x * currentDirection, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
 
-        bool leftGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(-collider.offset.x - feetOffset, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
-        Debug.DrawRay(transform.position + new Vector3(-collider.offset.x - feetOffset, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
-
-        bool rightGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(-collider.offset.x + feetOffset, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
-        Debug.DrawRay(transform.position + new Vector3(-collider.offset.x + feetOffset, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
-
-
-        return centerGrounded || leftGrounded || rightGrounded;
+        return centerGrounded;
     }
 }
