@@ -178,6 +178,8 @@ MonoBehaviour:
   walkTime: 0.1
   lemming: {fileID: 0}
   freezeCooldownTime: 2
+  feetOffset: 4
+  heightOffset: 4
 --- !u!95 &1547401646223475617
 Animator:
   serializedVersion: 5

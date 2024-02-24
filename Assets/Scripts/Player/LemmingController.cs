@@ -25,6 +25,9 @@ public class LemmingController : TimeStoppableEntity
 
     private Animator animator;
 
+    private bool isGrounded = false;
+    [SerializeField] private float feetOffset = 4f;
+    [SerializeField] private float heightOffset = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +42,11 @@ public class LemmingController : TimeStoppableEntity
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            isGrounded = IsGrounded();
+
             Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
 
-            if (!isManuallyFrozen && freezeCooldownTimer <= 0)
+            if (!isManuallyFrozen && freezeCooldownTimer <= 0 && isGrounded)
             {
                 isManuallyFrozen = true;
                 AudioManager.instance.PlaySFX("FreezeLemming");
@@ -52,7 +57,7 @@ public class LemmingController : TimeStoppableEntity
 
                 animator.speed = 0;
             }
-            else
+            else if(isGrounded)
             {
                 isManuallyFrozen = false;
                 isTimeStopped = false;
@@ -132,7 +137,7 @@ public class LemmingController : TimeStoppableEntity
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             int vertical = 0;
             int horizontal = 0;
@@ -214,4 +219,22 @@ public class LemmingController : TimeStoppableEntity
             gameObject.layer = LayerMask.NameToLayer("Player");
     }
 
+    private bool IsGrounded()
+    {
+
+        LayerMask groundLayer = LayerMask.NameToLayer("Ground");
+        BoxCollider2D collider = GetComponent<BoxCollider2D>();
+
+        bool centerGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(-collider.offset.x, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(transform.position + new Vector3(-collider.offset.x, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
+
+        bool leftGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(-collider.offset.x - feetOffset, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(transform.position + new Vector3(-collider.offset.x - feetOffset, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
+
+        bool rightGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(-collider.offset.x + feetOffset, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground"));
+        Debug.DrawRay(transform.position + new Vector3(-collider.offset.x + feetOffset, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
+
+
+        return centerGrounded || leftGrounded || rightGrounded;
+    }
 }
