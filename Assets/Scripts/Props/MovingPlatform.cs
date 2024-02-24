@@ -14,6 +14,7 @@ public class MovingPlatform : TimeStoppableEntity
     private int patrolTargetPoint = 0;
     private int patrolDirection = 1;
 
+    [HideInInspector] public Vector2 currentMovementDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,8 @@ public class MovingPlatform : TimeStoppableEntity
 
         Vector2 nextDirection = patrolPoints[patrolTargetPoint] - new Vector2(transform.position.x, transform.position.y);
         nextDirection = new Vector2(Mathf.RoundToInt(nextDirection.x) > 0 ? 1 : Mathf.RoundToInt(nextDirection.x) < 0 ? -1 : 0, Mathf.RoundToInt(nextDirection.y) > 0 ? 1 : Mathf.RoundToInt(nextDirection.y) < 0 ? -1 : 0);
+
+        currentMovementDirection = nextDirection;
 
         if (nextDirection == Vector2.zero)
             patrolTargetPoint += 1 * patrolDirection;
