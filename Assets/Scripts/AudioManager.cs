@@ -5,7 +5,9 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
   public static AudioManager instance;
-  private AudioSource audioSource;
+  [SerializeField] private AudioSource musicSource;
+  [SerializeField] private AudioSource sfxSource;
+
   public List<Sound> soundEffects;
   public List<Sound> tracks;
 
@@ -23,8 +25,7 @@ public class AudioManager : MonoBehaviour
   void Start()
   {
     // Find the AudioSource for music on the same GameObject
-    audioSource = GetComponent<AudioSource>();
-
+    musicSource = GetComponent<AudioSource>();
 
   }
 
@@ -34,29 +35,26 @@ public class AudioManager : MonoBehaviour
   {
     Sound music = tracks.Find(sound => sound.name == name);
 
-    audioSource.clip = music.clip;
-    audioSource.Play();
+    Debug.Log(music.clip);
+    music.source.clip = music.clip;
+    music.source.Play();
   }
 
   public void PlaySFX(string name)
   {
     Sound sfx = soundEffects.Find(sound => sound.name == name);
-    if (audioSource.isPlaying && sfx != null)
+    if (musicSource.isPlaying && sfx != null)
     {
-      audioSource.Pause();
-      audioSource.PlayOneShot(sfx.clip);
-      StartCoroutine(ResumeMusicAfterSFX());
+      musicSource.Pause();
+      sfxSource.PlayOneShot(sfx.clip);
+      StartCoroutine(ResumeMusicAfterSFX(sfx.clip.length));
     }
-    else
-    {
-      audioSource.PlayOneShot(sfx.clip);
-    }
+
   }
 
-  private System.Collections.IEnumerator ResumeMusicAfterSFX()
+  private IEnumerator ResumeMusicAfterSFX(float delay)
   {
-    yield return new WaitForSeconds(audioSource.clip.length);
-    audioSource.Play();
+    yield return new WaitForSeconds(delay);
+    musicSource.UnPause();
   }
-
 }
