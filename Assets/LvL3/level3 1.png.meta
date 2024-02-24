@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b1111308f3b9bcc4dbe2eeb778ed95da
+guid: e1c95b477e6535642ad3e044e9d5677e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level3_0
+      name: level3 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82901e7f5500c6d40817e63a1b6ba818
-      internalID: 47860308
+      spriteID: 52623b14ca094ed4cafc656d70e01b0b
+      internalID: -126941178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_1
+      name: level3 1_1
       rect:
         serializedVersion: 2
         x: 22
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0feaa2aca420f0458927e29d56ecfc7
-      internalID: 738119081
+      spriteID: c232686b4c4d7d64fb2fcc1eea410445
+      internalID: -1790018091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_2
+      name: level3 1_2
       rect:
         serializedVersion: 2
         x: 44
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeafaa320b8528349a38e3447ea7dc84
-      internalID: 1151492476
+      spriteID: 0584b0bc64ff6334aab3ec9be4deee5e
+      internalID: 195190826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_3
+      name: level3 1_3
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ed5c24fee14e7941af591bc37ce953e
-      internalID: 1728049333
+      spriteID: f6c839019ed356a439ec34f4e26617e3
+      internalID: 320519731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_4
+      name: level3 1_4
       rect:
         serializedVersion: 2
         x: 44
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4d1290ef3a37364db06740906d79411
-      internalID: -941531491
+      spriteID: 59692566ad88fdd448dde027821b7338
+      internalID: 1076734823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_5
+      name: level3 1_5
       rect:
         serializedVersion: 2
         x: 0
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14800777d765a024cab0f1986908012a
-      internalID: -521968838
+      spriteID: 3bd1d60df4df4c343ba598974f64c89f
+      internalID: 1496392123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_6
+      name: level3 1_6
       rect:
         serializedVersion: 2
         x: 22
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12b5e234f00df7a45b9079b816472425
-      internalID: -1934834142
+      spriteID: 619d07fee8fcc684892d70161495b29c
+      internalID: 1315536489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level3_7
+      name: level3 1_7
       rect:
         serializedVersion: 2
         x: 44
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fde9daaf41cede48bdc5e02b99409fc
-      internalID: -1108879075
+      spriteID: 20e43f9d2e7bbf746836a9ecda1c33a7
+      internalID: -362316245
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      level3_0: 47860308
-      level3_1: 738119081
-      level3_2: 1151492476
-      level3_3: 1728049333
-      level3_4: -941531491
-      level3_5: -521968838
-      level3_6: -1934834142
-      level3_7: -1108879075
+      level3 1_0: -126941178
+      level3 1_1: -1790018091
+      level3 1_2: 195190826
+      level3 1_3: 320519731
+      level3 1_4: 1076734823
+      level3 1_5: 1496392123
+      level3 1_6: 1315536489
+      level3 1_7: -362316245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
