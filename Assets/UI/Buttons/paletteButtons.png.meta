@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 80a886e8114be8046976f5cbdeeb7cb1
+guid: c7832b19bb7b5594ba8a24514bf39d47
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,34 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WORDS_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 25
-        width: 20
-        height: 5
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cd524c2e3869fb4fbf49eb963abb640
-      internalID: 2107357226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WORDS_1
+      name: paletteButtons_0
       rect:
         serializedVersion: 2
         x: 0
         y: 20
-        width: 20
-        height: 5
+        width: 8
+        height: 10
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6213e9745020b864ba33160715beab8f
-      internalID: -1655771483
+      spriteID: 0a1988d3672d2e74582498cce6ffe6e6
+      internalID: -2044464399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WORDS_2
+      name: paletteButtons_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 15
-        width: 20
-        height: 5
+        x: 8
+        y: 20
+        width: 8
+        height: 10
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +145,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62350b0b8237acc4699f59a34c3e146a
-      internalID: 1344760956
+      spriteID: 4104dfc46575aa94093dc7ce15a2ca68
+      internalID: -435950045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WORDS_3
+      name: paletteButtons_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 20
+        width: 8
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd58259ca979cf4d8ea9752ec7e5f68
+      internalID: 1965906440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paletteButtons_3
       rect:
         serializedVersion: 2
         x: 0
         y: 10
-        width: 20
-        height: 5
+        width: 8
+        height: 10
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb99adb68d583834d83038a0d6dd921d
-      internalID: 857449218
+      spriteID: ce1f1ebf373d04b46a39678a85320b59
+      internalID: -222405895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WORDS_4
+      name: paletteButtons_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 20
-        height: 5
+        x: 8
+        y: 10
+        width: 8
+        height: 10
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2933c8ce64f88ed44b6dc810b4d93046
-      internalID: 2115226531
+      spriteID: 2d18b1dab2fde9a4e8fa8f6a5fc3ad77
+      internalID: -585355822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WORDS_5
+      name: paletteButtons_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 10
+        width: 8
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877f0ff1f1d25644d8e705849a82fa7e
+      internalID: 782199287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paletteButtons_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 20
-        height: 5
+        width: 8
+        height: 10
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +250,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce0d0f71bb9edb74cb50e25d6171defe
-      internalID: -363488531
+      spriteID: 28f5802bae769374a9c460c26ba2873f
+      internalID: -2134389868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paletteButtons_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 8
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d059bc0d18bf43345a2ef48f32a7b72f
+      internalID: 350992362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: paletteButtons_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 8
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fa11ebec37c8945a2dcbf93c16547c
+      internalID: -1363481453
       vertices: []
       indices: 
       edges: []
@@ -246,12 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WORDS_0: 2107357226
-      WORDS_1: -1655771483
-      WORDS_2: 1344760956
-      WORDS_3: 857449218
-      WORDS_4: 2115226531
-      WORDS_5: -363488531
+      paletteButtons_0: -2044464399
+      paletteButtons_1: -435950045
+      paletteButtons_2: 1965906440
+      paletteButtons_3: -222405895
+      paletteButtons_4: -585355822
+      paletteButtons_5: 782199287
+      paletteButtons_6: -2134389868
+      paletteButtons_7: 350992362
+      paletteButtons_8: -1363481453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

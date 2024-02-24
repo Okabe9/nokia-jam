@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4379b3a4ed34d77489b6512175e166c2
+guid: 82162828ac4eb514fbe052e0095d78ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,19 +81,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,43 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: levelButton_0
+      name: buttonShort_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 8
+        y: 10
+        width: 31
         height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9902a1dcb0f4902428fd799bed436a17
-      internalID: 1695443002
+      spriteID: 59c7d8e54dc4c1e4bb6eb635367e74f1
+      internalID: 450352273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: levelButton_1
+      name: buttonShort_1
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 8
+        x: 31
+        y: 10
+        width: 31
         height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f9963fd65d35a0409fde7ba3af4df68
-      internalID: -1590144550
+      spriteID: c74ae2d83c6dd5a4981b6d170f8cd415
+      internalID: 297601074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonShort_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 10
+        width: 31
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e749ce4671f679347b4412a99cb7139a
+      internalID: 1017042635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonShort_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 31
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5e4405d1ca5f746a2c35bc60526e6a
+      internalID: -935918293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonShort_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 31
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7442f8d9d5a3ecb448b4630eacd3b100
+      internalID: -2032062648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttonShort_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 31
+        height: 10
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c796fbf36e107b04eb4f445c8ca38a1e
+      internalID: -623369052
       vertices: []
       indices: 
       edges: []
@@ -175,8 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      levelButton_0: 1695443002
-      levelButton_1: -1590144550
+      buttonShort_0: 450352273
+      buttonShort_1: 297601074
+      buttonShort_2: 1017042635
+      buttonShort_3: -935918293
+      buttonShort_4: -2032062648
+      buttonShort_5: -623369052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
