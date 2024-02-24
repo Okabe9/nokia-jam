@@ -18,7 +18,7 @@ public class LemmingController : TimeStoppableEntity
     private Vector3 previousVelocity;
     private float previousAngularVelocity;
 
-    private bool isManuallyFrozen = false;
+    [SerializeField] private bool isManuallyFrozen = false;
     private bool snappedToPlatform = true;
 
     [SerializeField] private float freezeCooldownTime = 2f;

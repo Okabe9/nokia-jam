@@ -1458,17 +1458,21 @@ PrefabInstance:
       propertyPath: isTimeStopped
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4152506977771749554, guid: e2cfe2930cbf78843a289a77758b8394, type: 3}
+      propertyPath: isManuallyFrozen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5952284552760051719, guid: e2cfe2930cbf78843a289a77758b8394, type: 3}
       propertyPath: m_Name
       value: bichin
       objectReference: {fileID: 0}
     - target: {fileID: 8378616094936778110, guid: e2cfe2930cbf78843a289a77758b8394, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.12
+      value: -21.6
       objectReference: {fileID: 0}
     - target: {fileID: 8378616094936778110, guid: e2cfe2930cbf78843a289a77758b8394, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.62
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 8378616094936778110, guid: e2cfe2930cbf78843a289a77758b8394, type: 3}
       propertyPath: m_LocalPosition.z
