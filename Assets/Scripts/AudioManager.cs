@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
 
   private IEnumerator ResumeMusicAfterSFX(float delay)
   {
-    yield return new WaitForSeconds(delay);
+    yield return new WaitForSeconds(delay + 1f);
     musicSource.UnPause();
   }
 }

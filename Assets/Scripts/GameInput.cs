@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
+public class GameInput : MonoBehaviour
 {
   int gridX = 0;
   int gridY = 0;
