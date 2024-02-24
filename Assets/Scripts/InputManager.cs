@@ -25,6 +25,7 @@ public class InputManager : MonoBehaviour
       Destroy(gameObject);
     }
     _playerInput = new PlayerInput();
+    print(_playerInput.actions);
     _openEscMenuAction = _playerInput.actions["OpenEscMenu"];
   }
   void Start()
