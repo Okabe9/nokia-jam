@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 21234739475101539}
   - component: {fileID: 2286414035291458348}
   - component: {fileID: -2022709019229639606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MovingPlatform
   m_TagString: MovingPlatform
   m_Icon: {fileID: 0}
@@ -152,6 +152,7 @@ MonoBehaviour:
   - {x: 7.5, y: -3.5}
   pingPongMovement: 0
   activationTime: 0.1
+  currentMovementDirection: {x: 0, y: 0}
 --- !u!50 &-2022709019229639606
 Rigidbody2D:
   serializedVersion: 4

@@ -43,9 +43,10 @@ public class AudioManager : MonoBehaviour
   public void PlaySFX(string name)
   {
     Sound sfx = soundEffects.Find(sound => sound.name == name);
-    if (musicSource.isPlaying && sfx != null)
+    if (sfx != null)
     {
       musicSource.Pause();
+      sfxSource.Stop();
       sfxSource.PlayOneShot(sfx.clip);
       StartCoroutine(ResumeMusicAfterSFX(sfx.clip.length));
     }
@@ -54,7 +55,7 @@ public class AudioManager : MonoBehaviour
 
   private IEnumerator ResumeMusicAfterSFX(float delay)
   {
-    yield return new WaitForSeconds(delay + 1f);
+    yield return new WaitForSeconds(delay + 0.15f);
     musicSource.UnPause();
   }
 }
