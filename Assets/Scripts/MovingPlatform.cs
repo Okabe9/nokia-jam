@@ -45,7 +45,7 @@ public class MovingPlatform : TimeStoppableEntity
         CheckPatrolBounds();
 
         Vector2 nextDirection = patrolPoints[patrolTargetPoint] - new Vector2(transform.position.x, transform.position.y);
-        nextDirection = new Vector2(nextDirection.x > 0 ? 1 : nextDirection.x < 0 ? -1 : 0, nextDirection.y > 0 ? 1 : nextDirection.y < 0 ? -1 : 0);
+        nextDirection = new Vector2(Mathf.RoundToInt(nextDirection.x) > 0 ? 1 : Mathf.RoundToInt(nextDirection.x) < 0 ? -1 : 0, Mathf.RoundToInt(nextDirection.y) > 0 ? 1 : Mathf.RoundToInt(nextDirection.y) < 0 ? -1 : 0);
 
         if (nextDirection == Vector2.zero)
             patrolTargetPoint += 1 * patrolDirection;

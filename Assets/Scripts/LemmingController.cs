@@ -99,8 +99,8 @@ public class LemmingController : TimeStoppableEntity
 
     bool WallInFront()
     {
-        bool wallInFront = Physics2D.Raycast(transform.position, new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall"));
-        Debug.DrawRay(transform.position, new Vector2(currentDirection * 4, 0), Color.red);
+        bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (5.5f * currentDirection), transform.position.y - 6f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall"));
+        Debug.DrawRay(new Vector3(transform.position.x + (5.5f * currentDirection), transform.position.y - 6f, 0), new Vector2(currentDirection * 4, 0), Color.red);
 
         return wallInFront;
     }
