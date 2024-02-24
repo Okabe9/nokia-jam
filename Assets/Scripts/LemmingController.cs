@@ -79,6 +79,7 @@ public class LemmingController : TimeStoppableEntity
             //Change direction
             currentDirection *= -1;
             transform.localScale = new Vector3(currentDirection, 1, 1);
+            transform.position = new Vector3(Mathf.RoundToInt(transform.position.x - (5f * currentDirection)), transform.position.y);
         }
 
         if (!isTimeStopped)
@@ -99,8 +100,9 @@ public class LemmingController : TimeStoppableEntity
 
     bool WallInFront()
     {
-        bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (5.5f * currentDirection), transform.position.y - 6f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall"));
-        Debug.DrawRay(new Vector3(transform.position.x + (5.5f * currentDirection), transform.position.y - 6f, 0), new Vector2(currentDirection * 4, 0), Color.red);
+        bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall"));
+        Debug.DrawRay(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection * 4, 0), Color.red);
+
 
         return wallInFront;
     }
@@ -130,8 +132,6 @@ public class LemmingController : TimeStoppableEntity
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        return;
-
         if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.CompareTag("Ground"))
         {
             int vertical = 0;
@@ -175,6 +175,7 @@ public class LemmingController : TimeStoppableEntity
                 //Right Collision
                 currentDirection *= -1;
                 transform.localScale = new Vector3(currentDirection, 1, 1);
+                transform.position = new Vector3(Mathf.RoundToInt(transform.position.x - (5f * currentDirection)), transform.position.y);
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
             }
@@ -183,6 +184,7 @@ public class LemmingController : TimeStoppableEntity
                 //Left Collision
                 currentDirection *= -1;
                 transform.localScale = new Vector3(currentDirection, 1, 1);
+                transform.position = new Vector3(Mathf.RoundToInt(transform.position.x - (5f * currentDirection)), transform.position.y);
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             }
         }
