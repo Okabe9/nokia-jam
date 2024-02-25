@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    currentLemming.GetComponent<Animator>().SetBool("isFirstTime", true);
 
 
   }
@@ -62,6 +61,8 @@ public class GameManager : MonoBehaviour
     hoverBorderInstance = Instantiate(hoverBorderPrefab, borderPositionsGrid[0, 0], Quaternion.identity);
     AudioManager.instance.PlaySFX("StartLevel");
     currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
+    currentLemming.GetComponent<Animator>().SetBool("isFirstTime", true);
+
   }
   public Vector2[,] GetGrid()
   {
