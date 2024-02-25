@@ -4,76 +4,88 @@ using UnityEngine;
 
 public enum ButtonFunctionality
 {
-    MOVETO,
-    DESTROY,
-    NONE,
+  MOVETO,
+  DESTROY,
+  NONE,
 }
 
 public class Button : MonoBehaviour
 {
-    [SerializeField] private ButtonFunctionality functionality;
-    [SerializeField] private GameObject objectToAffect;
-    [SerializeField] private GameObject objectToAffectCollider;
-    [SerializeField] private bool isOneTimeUse;
+  [SerializeField] private ButtonFunctionality functionality;
+  [SerializeField] private GameObject objectToAffect;
+  [SerializeField] private GameObject objectToAffectCollider;
+  [SerializeField] private bool isOneTimeUse;
 
-    private bool buttonActivated = false;
-    private int collisionCount = 0;
+  private bool buttonActivated = false;
+  private int collisionCount = 0;
 
-    public void OnTriggerEnter2D(Collider2D collision)
+  public void OnTriggerEnter2D(Collider2D collision)
+  {
+    if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
     {
-        if(collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
-        {
-            collisionCount++;
+      collisionCount++;
 
-            if (isOneTimeUse)
-                buttonActivated = true;
-        }
+      if (isOneTimeUse)
+        buttonActivated = true;
     }
+  }
 
-    public void OnTriggerStay2D(Collider2D collision)
+  public void OnTriggerStay2D(Collider2D collision)
+  {
+    if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
-        {
-            buttonActivated = true;
+      buttonActivated = true;
 
-            if (buttonActivated)
+      if (buttonActivated)
+      {
+        switch (functionality)
+        {
+          case ButtonFunctionality.MOVETO:
+
+            break;
+          case ButtonFunctionality.DESTROY:
+            if (objectToAffect != null && objectToAffectCollider != null)
             {
-                switch (functionality)
-                {
-                    case ButtonFunctionality.MOVETO:
-
-                        break;
-                    case ButtonFunctionality.DESTROY:
-                        if (objectToAffect != null && objectToAffectCollider != null)
-                        {
-                            objectToAffect.SetActive(false);
-                            objectToAffectCollider.SetActive(false);
-                        }
-                        break;
-                    case ButtonFunctionality.NONE:
-                        break;
-                    default:
-                        break;
-                }
+              objectToAffect.SetActive(false);
+              objectToAffectCollider.SetActive(false);
             }
+            else if (objectToAffect != null)
+            {
+              objectToAffect.SetActive(false);
+            }
+            else if (objectToAffectCollider != null)
+            {
+              objectToAffectCollider.SetActive(false);
+            }
+            else
+            {
+              Debug.LogError("No object to affect has been assigned to the button");
+            }
+            break;
+          case ButtonFunctionality.NONE:
+            break;
+          default:
+            break;
         }
-        
+      }
     }
 
-    public void OnTriggerExit2D(Collider2D collision)
+  }
+
+  public void OnTriggerExit2D(Collider2D collision)
+  {
+    if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
-        {
-            collisionCount--;
+      collisionCount--;
 
-            if (!isOneTimeUse && collisionCount == 0)
-                buttonActivated = false;
-        }
+      if (!isOneTimeUse && collisionCount == 0)
+        buttonActivated = false;
     }
+  }
 
-    public void RestartObjects()
-    {
-        objectToAffect.SetActive(true);
-        objectToAffectCollider.SetActive(true);
-    }
+  public void RestartObjects()
+  {
+    objectToAffect.SetActive(true);
+    objectToAffectCollider.SetActive(true);
+  }
 }

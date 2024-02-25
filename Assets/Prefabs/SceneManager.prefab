@@ -1252,6 +1252,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6992706756568831439}
     m_Modifications:
+    - target: {fileID: 681864935395886234, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1149465501120303414, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.2037616
@@ -1295,6 +1299,34 @@ PrefabInstance:
     - target: {fileID: 1728438819388317927, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f44aabd0e59d054b872597e61f6196f, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[12].name
+      value: Sparkle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f44aabd0e59d054b872597e61f6196f, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[13].name
+      value: PcInit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[12].volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[13].volume
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
