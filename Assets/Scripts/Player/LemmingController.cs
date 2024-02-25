@@ -47,8 +47,11 @@ public class LemmingController : TimeStoppableEntity
     void Update()
     {
         animator.SetBool("isGrounded", isGrounded);
-        isGrounded = IsGrounded();
-
+        
+        if(!isManuallyFrozen || !snappedToPlatform)
+        {
+            isGrounded = IsGrounded();
+        }
         if (freezeCooldownTimer > 0)
             freezeCooldownTimer -= Time.deltaTime;
 

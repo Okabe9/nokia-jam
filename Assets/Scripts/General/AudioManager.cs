@@ -4,58 +4,70 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-  public static AudioManager instance;
-  [SerializeField] private AudioSource musicSource;
-  [SerializeField] private AudioSource sfxSource;
+    public static AudioManager instance;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource sfxSource;
 
-  public List<Sound> soundEffects;
-  public List<Sound> tracks;
+    public List<Sound> soundEffects;
+    public List<Sound> tracks;
 
-  private void Awake()
-  {
-    if (instance == null)
+    private void Awake()
     {
-      instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
-    else if (instance != this)
+    void Start()
     {
-      Destroy(gameObject);
-    }
-  }
-  void Start()
-  {
-    // Find the AudioSource for music on the same GameObject
-    musicSource = GetComponent<AudioSource>();
+        // Find the AudioSource for music on the same GameObject
+        musicSource = GetComponent<AudioSource>();
 
-  }
-
-
-  // Play music with specified AudioClip
-  public void PlayMusic(string name)
-  {
-    Sound music = tracks.Find(sound => sound.name == name);
-
-    Debug.Log(music.clip);
-    music.source.clip = music.clip;
-    music.source.Play();
-  }
-
-  public void PlaySFX(string name)
-  {
-    Sound sfx = soundEffects.Find(sound => sound.name == name);
-    if (sfx != null)
-    {
-      musicSource.Pause();
-      sfxSource.Stop();
-      sfxSource.PlayOneShot(sfx.clip);
-      StartCoroutine(ResumeMusicAfterSFX(sfx.clip.length));
     }
 
-  }
 
-  private IEnumerator ResumeMusicAfterSFX(float delay)
-  {
-    yield return new WaitForSeconds(delay + 0.15f);
-    musicSource.UnPause();
-  }
+    // Play music with specified AudioClip
+    public void PlayMusic(string name)
+    {
+        Sound music = tracks.Find(sound => sound.name == name);
+
+        Debug.Log(music.clip);
+        musicSource.clip = music.clip;
+        musicSource.Play();
+    }
+    public void StopMusic()
+    {
+        musicSource.Stop(); 
+    }
+    public void PlaySFX(string name)
+    {
+        Sound sfx = soundEffects.Find(sound => sound.name == name);
+        if (sfx != null)
+        {
+            musicSource.Pause();
+            sfxSource.Stop();
+            sfxSource.PlayOneShot(sfx.clip);
+            StartCoroutine(ResumeMusicAfterSFX(sfx.clip.length));
+        }
+
+    }
+
+    private IEnumerator ResumeMusicAfterSFX(float delay)
+    {
+        yield return new WaitForSeconds(delay + 0.15f);
+        musicSource.UnPause();
+    }
+    public void StopMusicLoop()
+    {
+        musicSource.loop = false; 
+    }
+    public void StartMusicLoop()
+    {
+        musicSource.loop = true;
+    }
+
 }

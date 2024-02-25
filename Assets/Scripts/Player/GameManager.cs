@@ -47,19 +47,20 @@ public class GameManager : MonoBehaviour
   void Start()
   {
 
+        AudioManager.instance.StopMusic();
 
-  }
+    }
 
-  // SceneManagement
+    // SceneManagement
 
 
-  #region Game
+    #region Game
 
-  public void StartLevel()
+    public void StartLevel()
   {
     Vector2[,] borderPositionsGrid = GetGrid();
     hoverBorderInstance = Instantiate(hoverBorderPrefab, borderPositionsGrid[0, 0], Quaternion.identity);
-    AudioManager.instance.PlaySFX("StartLevel");
+    AudioManager.instance.PlayMusic("GameSong"); 
     currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
     currentLemming.GetComponent<Animator>().SetBool("isFirstTime", true);
 
@@ -125,7 +126,6 @@ public class GameManager : MonoBehaviour
   public void RestartLevel()
   {
     currentLemming.GetComponent<Animator>().SetBool("isFirstTime", false);
-    AudioManager.instance.PlaySFX("StartLevel");
     currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
 
         GameObject[] buttonsInScene = GameObject.FindGameObjectsWithTag("Button");
@@ -133,10 +133,12 @@ public class GameManager : MonoBehaviour
         {
             button.GetComponent<Button>().RestartObjects();
         }
-  }
+    AudioManager.instance.PlaySFX("StartLevel");
 
-  #endregion
-  public void MoveSelectionBorderUp(InputAction.CallbackContext context)
+    }
+
+    #endregion
+    public void MoveSelectionBorderUp(InputAction.CallbackContext context)
   {
     if (context.performed)
     {

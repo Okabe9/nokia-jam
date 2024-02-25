@@ -45,7 +45,6 @@ public class SceneChanger : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         TogglePause(true);
-        AudioManager.instance.PlaySFX("SelectUI");
 
         SceneManager.LoadScene(sceneName);
     }
