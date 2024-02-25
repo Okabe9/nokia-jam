@@ -53,11 +53,12 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        TogglePause(true);
         SceneManager.LoadScene(sceneName);
     }
     public void CloseGame()
     {
-        Application.Quit();
+        TogglePause();
     }
     public void SpritePainting()
     {
@@ -133,10 +134,10 @@ public class SceneChanger : MonoBehaviour
 
     }
 
-    private void TogglePause()
+    private void TogglePause(bool forceClose = false)
     {
 
-        if (pauseMenu.activeSelf)
+        if (pauseMenu.activeSelf || forceClose)
         {
             gaijinEventSystem.SetActive(true);
             pauseMenu.SetActive(false);
