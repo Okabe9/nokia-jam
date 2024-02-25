@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class AnytaMaxWynn : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+  [SerializeField] private string nextLevelName;
+  private void OnTriggerEnter2D(Collider2D collision)
+  {
+    if (collision.gameObject.CompareTag("Player"))
     {
-        if(collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(collision.gameObject);
-            gameObject.GetComponent<Animator>().SetTrigger("Activate");
+      Destroy(collision.gameObject);
+      gameObject.GetComponent<Animator>().SetTrigger("FinalVictory");
 
-            // On Anim End Call Win
-        }
+      // On Anim End Call Win
     }
+  }
+  public void LoadNextLevel()
+  {
+    SceneChanger.instance.ChangeScene(nextLevelName);
+  }
 }
