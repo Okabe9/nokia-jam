@@ -13,7 +13,7 @@ public class MovingPlatform : TimeStoppableEntity
 
     private int patrolTargetPoint = 0;
     private int patrolDirection = 1;
-
+    public LemmingController attachedLemming; 
     [HideInInspector] public Vector2 currentMovementDirection;
 
     // Start is called before the first frame update
@@ -57,6 +57,10 @@ public class MovingPlatform : TimeStoppableEntity
 
         //Move one unit forward
         transform.position += new Vector3(nextDirection.x, nextDirection.y, 0);
+        if(attachedLemming!=null)
+        {
+            attachedLemming.transform.position = new Vector3(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y+5), 0);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

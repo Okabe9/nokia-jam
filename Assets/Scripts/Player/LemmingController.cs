@@ -52,10 +52,11 @@ public class LemmingController : TimeStoppableEntity
         {
             isGrounded = IsGrounded();
         }
+       
         if (freezeCooldownTimer > 0)
             freezeCooldownTimer -= Time.deltaTime;
 
-        if (isManuallyFrozen && !snappedToPlatform)
+        if (isManuallyFrozen)
             isTimeStopped = true;
 
 
@@ -158,6 +159,7 @@ public class LemmingController : TimeStoppableEntity
                 FlipHorizontally();
             }
         }
+       
     }
 
     public void Death()
@@ -190,6 +192,7 @@ public class LemmingController : TimeStoppableEntity
         if (isManuallyFrozen)
         {
             Vector2 platformDirection = hit.collider.gameObject.GetComponent<MovingPlatform>().currentMovementDirection;
+            print(platformDirection.x + " " + platformDirection.y);
             if (platformDirection.x != 0)
             {
                 if (currentDirection != Mathf.RoundToInt(platformDirection.x))
@@ -200,6 +203,7 @@ public class LemmingController : TimeStoppableEntity
 
                 currentDirection = Mathf.RoundToInt(platformDirection.x);
             }
+           
         }
     }
 
@@ -212,24 +216,18 @@ public class LemmingController : TimeStoppableEntity
         }
 
 
-        if (collision.gameObject.CompareTag("MovingPlatform") && !collision.gameObject.GetComponent<TimeStoppableEntity>().isTimeStopped)
+        if (collision.gameObject.CompareTag("MovingPlatform"))
         {
             gameObject.layer = collision.gameObject.layer;
             snappedToPlatform = true;
 
             if (isManuallyFrozen)
             {
-                Vector2 platformDirection = collision.collider.gameObject.GetComponent<MovingPlatform>().currentMovementDirection;
-                if (platformDirection.x != 0)
-                {
-                    if (currentDirection != Mathf.RoundToInt(platformDirection.x))
-                    {
-                        FlipHorizontally();
-                        transform.position = new Vector3(transform.position.x - 3 * currentDirection, transform.position.y, 0);
-                    }
-
-                    currentDirection = Mathf.RoundToInt(platformDirection.x);
-                }
+                collision.gameObject.GetComponent<MovingPlatform>().attachedLemming = this; 
+            }
+            else
+            {
+                collision.gameObject.GetComponent<MovingPlatform>().attachedLemming = null;
             }
         }
         else
@@ -247,6 +245,8 @@ public class LemmingController : TimeStoppableEntity
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))
             gameObject.layer = LayerMask.NameToLayer("Player");
+            collision.gameObject.GetComponent<MovingPlatform>().attachedLemming = null;
+
     }
 
     private bool IsGrounded()
