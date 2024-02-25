@@ -274,6 +274,17 @@
                 },
                 {
                     "name": "",
+                    "id": "09940df9-9a24-4d28-b11e-9dfd7dfd04d3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FREEZE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f25f9cf1-6783-4aa0-8a5e-3231465a93aa",
                     "path": "<Keyboard>/f",
                     "interactions": "",
