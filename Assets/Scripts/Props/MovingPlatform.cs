@@ -91,6 +91,14 @@ public class MovingPlatform : TimeStoppableEntity
                 patrolTargetPoint = 0;
         }
         else if (patrolTargetPoint < 0)
-            patrolTargetPoint = patrolPoints.Count - 1;
+        {
+            if (pingPongMovement)
+            {
+                patrolTargetPoint -= 2 * patrolDirection;
+                patrolDirection *= -1;
+            }
+            else
+                patrolTargetPoint = patrolPoints.Count - 1;
+        }
     }
 }

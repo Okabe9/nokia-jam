@@ -56,7 +56,7 @@ public class SceneChanger : MonoBehaviour
     {
         PalleteController.instance.currentPalleteIndex = palleteIndex;
         PalleteController.instance.SpritePainting();
-
+        AudioManager.instance.PlaySFX("Paleta");
     }
 
 
@@ -74,6 +74,8 @@ public class SceneChanger : MonoBehaviour
                 gameController.GetComponent<PlayerInput>().enabled =true;
 
             }
+            AudioManager.instance.PlaySFX("ClosePause");
+
             pauseMenu.SetActive(false);
         }
 
@@ -88,8 +90,11 @@ public class SceneChanger : MonoBehaviour
                 gameController.GetComponent<PlayerInput>().enabled = false;
 
             }
+            AudioManager.instance.PlaySFX("OpenPause");
+
             pauseMenu.SetActive(true);
         }
+
         PalleteController.instance.SpritePainting();
     }
 

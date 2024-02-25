@@ -20,31 +20,37 @@ public class Button : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        collisionCount++;
+        if(collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
+        {
+            collisionCount++;
 
-        if (isOneTimeUse)
-            buttonActivated = true;
+            if (isOneTimeUse)
+                buttonActivated = true;
+        }
     }
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        buttonActivated = true;
-
-        if(buttonActivated)
+        if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
         {
-            switch (functionality)
-            {
-                case ButtonFunctionality.MOVETO:
+            buttonActivated = true;
 
-                    break;
-                case ButtonFunctionality.DESTROY:
-                    if(objectToAffect != null)
-                        objectToAffect.SetActive(false);
-                    break;
-                case ButtonFunctionality.NONE:
-                    break;
-                default:
-                    break;
+            if (buttonActivated)
+            {
+                switch (functionality)
+                {
+                    case ButtonFunctionality.MOVETO:
+
+                        break;
+                    case ButtonFunctionality.DESTROY:
+                        if (objectToAffect != null)
+                            objectToAffect.SetActive(false);
+                        break;
+                    case ButtonFunctionality.NONE:
+                        break;
+                    default:
+                        break;
+                }
             }
         }
         
@@ -52,10 +58,13 @@ public class Button : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        collisionCount--;
+        if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
+        {
+            collisionCount--;
 
-        if (!isOneTimeUse && collisionCount == 0)
-            buttonActivated = false;
+            if (!isOneTimeUse && collisionCount == 0)
+                buttonActivated = false;
+        }
     }
 
     public void RestartObjects()

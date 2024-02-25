@@ -146,86 +146,74 @@ MonoBehaviour:
   sfxSource: {fileID: 3984959304325441772}
   soundEffects:
   - name: InsertCD
-    clip: {fileID: 8300000, guid: 7f44aabd0e59d054b872597e61f6196f, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: aff33b50a973249449bd03d2b3284973, type: 3}
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: PCPipuPipu
     clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: StartLevel
     clip: {fileID: 8300000, guid: 97bdae8ef8dcc4940a4436983500513c, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: Freeze
     clip: {fileID: 8300000, guid: 92073daabc50ce04a92ffe920873c202, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: Unfreeze
     clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: FreezeLemming
     clip: {fileID: 8300000, guid: 435d74040af0fa64687be1f32788cd10, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: UnfreezeLemming
     clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: MoveUI
-    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 13a0682cd7441c045971a5b0ac3dab58, type: 3}
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: SelectUI
-    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 1762d516afef1e2449b76bfe44a827ec, type: 3}
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: OpenPause
     clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: 'ClosePause '
     clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: PaletaA
-    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: PaletaB
-    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: PaletaC
-    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
-    volume: 0.5
+  - name: Paleta
+    clip: {fileID: 8300000, guid: 7f44aabd0e59d054b872597e61f6196f, type: 3}
+    volume: 0.3
     pitch: 0
     loop: 0
     source: {fileID: 0}
