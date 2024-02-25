@@ -115,10 +115,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: finalDoorVictory_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 13
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: finalDoorVictory_2
       rect:
         serializedVersion: 2
-        x: 38
+        x: 26
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: finalDoorVictory_3
       rect:
         serializedVersion: 2
-        x: 57
+        x: 39
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: finalDoorVictory_4
       rect:
         serializedVersion: 2
-        x: 76
+        x: 52
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: finalDoorVictory_5
       rect:
         serializedVersion: 2
-        x: 95
+        x: 65
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: finalDoorVictory_6
       rect:
         serializedVersion: 2
-        x: 114
+        x: 78
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: finalDoorVictory_7
       rect:
         serializedVersion: 2
-        x: 133
+        x: 91
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: finalDoorVictory_8
       rect:
         serializedVersion: 2
-        x: 152
+        x: 104
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: finalDoorVictory_9
       rect:
         serializedVersion: 2
-        x: 171
+        x: 117
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,12 +323,12 @@ TextureImporter:
       name: finalDoorVictory_10
       rect:
         serializedVersion: 2
-        x: 190
+        x: 130
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,12 +344,12 @@ TextureImporter:
       name: finalDoorVictory_11
       rect:
         serializedVersion: 2
-        x: 209
+        x: 143
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -365,12 +365,12 @@ TextureImporter:
       name: finalDoorVictory_12
       rect:
         serializedVersion: 2
-        x: 228
+        x: 156
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -386,12 +386,12 @@ TextureImporter:
       name: finalDoorVictory_13
       rect:
         serializedVersion: 2
-        x: 247
+        x: 169
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -407,12 +407,12 @@ TextureImporter:
       name: finalDoorVictory_14
       rect:
         serializedVersion: 2
-        x: 266
+        x: 182
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -428,12 +428,12 @@ TextureImporter:
       name: finalDoorVictory_15
       rect:
         serializedVersion: 2
-        x: 285
+        x: 195
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,12 +449,12 @@ TextureImporter:
       name: finalDoorVictory_16
       rect:
         serializedVersion: 2
-        x: 304
+        x: 208
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -470,12 +470,12 @@ TextureImporter:
       name: finalDoorVictory_17
       rect:
         serializedVersion: 2
-        x: 323
+        x: 221
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -491,12 +491,12 @@ TextureImporter:
       name: finalDoorVictory_18
       rect:
         serializedVersion: 2
-        x: 342
+        x: 234
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -512,12 +512,12 @@ TextureImporter:
       name: finalDoorVictory_19
       rect:
         serializedVersion: 2
-        x: 361
+        x: 247
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -533,12 +533,12 @@ TextureImporter:
       name: finalDoorVictory_20
       rect:
         serializedVersion: 2
-        x: 380
+        x: 260
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -554,12 +554,12 @@ TextureImporter:
       name: finalDoorVictory_21
       rect:
         serializedVersion: 2
-        x: 399
+        x: 273
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -575,12 +575,12 @@ TextureImporter:
       name: finalDoorVictory_22
       rect:
         serializedVersion: 2
-        x: 418
+        x: 286
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -596,12 +596,12 @@ TextureImporter:
       name: finalDoorVictory_23
       rect:
         serializedVersion: 2
-        x: 437
+        x: 299
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -617,12 +617,12 @@ TextureImporter:
       name: finalDoorVictory_24
       rect:
         serializedVersion: 2
-        x: 456
+        x: 312
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -638,12 +638,12 @@ TextureImporter:
       name: finalDoorVictory_25
       rect:
         serializedVersion: 2
-        x: 475
+        x: 325
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -659,12 +659,12 @@ TextureImporter:
       name: finalDoorVictory_26
       rect:
         serializedVersion: 2
-        x: 494
+        x: 338
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -680,12 +680,12 @@ TextureImporter:
       name: finalDoorVictory_27
       rect:
         serializedVersion: 2
-        x: 513
+        x: 351
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -701,12 +701,12 @@ TextureImporter:
       name: finalDoorVictory_28
       rect:
         serializedVersion: 2
-        x: 532
+        x: 364
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -722,12 +722,12 @@ TextureImporter:
       name: finalDoorVictory_29
       rect:
         serializedVersion: 2
-        x: 551
+        x: 377
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -743,12 +743,12 @@ TextureImporter:
       name: finalDoorVictory_30
       rect:
         serializedVersion: 2
-        x: 570
+        x: 390
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -764,12 +764,12 @@ TextureImporter:
       name: finalDoorVictory_31
       rect:
         serializedVersion: 2
-        x: 589
+        x: 403
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -785,12 +785,12 @@ TextureImporter:
       name: finalDoorVictory_32
       rect:
         serializedVersion: 2
-        x: 608
+        x: 416
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -806,12 +806,12 @@ TextureImporter:
       name: finalDoorVictory_33
       rect:
         serializedVersion: 2
-        x: 627
+        x: 429
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -827,12 +827,12 @@ TextureImporter:
       name: finalDoorVictory_34
       rect:
         serializedVersion: 2
-        x: 646
+        x: 442
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -848,12 +848,12 @@ TextureImporter:
       name: finalDoorVictory_35
       rect:
         serializedVersion: 2
-        x: 665
+        x: 455
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -869,12 +869,12 @@ TextureImporter:
       name: finalDoorVictory_36
       rect:
         serializedVersion: 2
-        x: 684
+        x: 468
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -890,12 +890,12 @@ TextureImporter:
       name: finalDoorVictory_37
       rect:
         serializedVersion: 2
-        x: 703
+        x: 481
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -911,12 +911,12 @@ TextureImporter:
       name: finalDoorVictory_38
       rect:
         serializedVersion: 2
-        x: 722
+        x: 494
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -932,12 +932,12 @@ TextureImporter:
       name: finalDoorVictory_39
       rect:
         serializedVersion: 2
-        x: 741
+        x: 507
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -953,12 +953,12 @@ TextureImporter:
       name: finalDoorVictory_40
       rect:
         serializedVersion: 2
-        x: 760
+        x: 520
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -974,12 +974,12 @@ TextureImporter:
       name: finalDoorVictory_41
       rect:
         serializedVersion: 2
-        x: 779
+        x: 533
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -995,12 +995,12 @@ TextureImporter:
       name: finalDoorVictory_42
       rect:
         serializedVersion: 2
-        x: 798
+        x: 546
         y: 0
-        width: 19
-        height: 19
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 13
+        height: 13
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
