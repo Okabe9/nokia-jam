@@ -13,6 +13,7 @@ public class Button : MonoBehaviour
 {
     [SerializeField] private ButtonFunctionality functionality;
     [SerializeField] private GameObject objectToAffect;
+    [SerializeField] private GameObject objectToAffectCollider;
     [SerializeField] private bool isOneTimeUse;
 
     private bool buttonActivated = false;
@@ -43,8 +44,11 @@ public class Button : MonoBehaviour
 
                         break;
                     case ButtonFunctionality.DESTROY:
-                        if (objectToAffect != null)
+                        if (objectToAffect != null && objectToAffectCollider != null)
+                        {
                             objectToAffect.SetActive(false);
+                            objectToAffectCollider.SetActive(false);
+                        }
                         break;
                     case ButtonFunctionality.NONE:
                         break;
@@ -70,5 +74,6 @@ public class Button : MonoBehaviour
     public void RestartObjects()
     {
         objectToAffect.SetActive(true);
+        objectToAffectCollider.SetActive(true);
     }
 }
