@@ -12,7 +12,7 @@ public class MovingPlatform : TimeStoppableEntity
     [SerializeField] float activationTime = 0.2f;
 
     private int patrolTargetPoint = 0;
-    public int patrolDirection = -1;
+    private int patrolDirection = 1;
 
     [HideInInspector] public Vector2 currentMovementDirection;
 
@@ -53,8 +53,6 @@ public class MovingPlatform : TimeStoppableEntity
         if (nextDirection == Vector2.zero)
             patrolTargetPoint += 1 * patrolDirection;
 
-        print(patrolDirection);
-
         CheckPatrolBounds();
 
         //Move one unit forward
@@ -69,7 +67,6 @@ public class MovingPlatform : TimeStoppableEntity
             patrolDirection *= -1;
 
             CheckPatrolBounds();
-            print(patrolDirection);
 
             Vector2 nextDirection = patrolPoints[patrolTargetPoint] - new Vector2(transform.position.x, transform.position.y);
             nextDirection = new Vector2(nextDirection.x > 0 ? 1 : nextDirection.x < 0 ? -1 : 0, nextDirection.y > 0 ? 1 : nextDirection.y < 0 ? -1 : 0);
@@ -87,21 +84,13 @@ public class MovingPlatform : TimeStoppableEntity
         {
             if (pingPongMovement)
             {
-
                 patrolTargetPoint -= 2 * patrolDirection;
                 patrolDirection *= -1;
-
             }
             else
                 patrolTargetPoint = 0;
         }
         else if (patrolTargetPoint < 0)
-            if(pingPongMovement)
-            {
-                patrolTargetPoint -= 2 * patrolDirection;
-                patrolDirection *= -1;
-            }
-            else 
-                patrolTargetPoint = patrolPoints.Count - 1;
+            patrolTargetPoint = patrolPoints.Count - 1;
     }
 }
