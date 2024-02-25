@@ -460,6 +460,10 @@ PrefabInstance:
       value: Barrier (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3971991371041109384, guid: 4513a5c71df493743a9bffe5604b65a6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971991371041109384, guid: 4513a5c71df493743a9bffe5604b65a6, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1064,7 +1068,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 387540731526307665, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_Size.x
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 387540731526307665, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_Size.y
@@ -1072,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 387540731526307665, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_Offset.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 387540731526307665, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_Offset.y
@@ -1084,7 +1088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1354804569019092211, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1354804569019092211, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3645,7 +3649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1354804569019092211, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.76
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1354804569019092211, guid: 35e2c754b80a31f4fa6ec858e5493bc4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3715,6 +3719,10 @@ PrefabInstance:
     - target: {fileID: 3971991371041109384, guid: 4513a5c71df493743a9bffe5604b65a6, type: 3}
       propertyPath: m_Name
       value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971991371041109384, guid: 4513a5c71df493743a9bffe5604b65a6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3971991371041109384, guid: 4513a5c71df493743a9bffe5604b65a6, type: 3}
       propertyPath: m_IsActive
