@@ -39,7 +39,7 @@ public class Button : MonoBehaviour
                     break;
                 case ButtonFunctionality.DESTROY:
                     if(objectToAffect != null)
-                        Destroy(objectToAffect);
+                        objectToAffect.SetActive(false);
                     break;
                 case ButtonFunctionality.NONE:
                     break;
@@ -56,5 +56,10 @@ public class Button : MonoBehaviour
 
         if (!isOneTimeUse && collisionCount == 0)
             buttonActivated = false;
+    }
+
+    public void RestartObjects()
+    {
+        objectToAffect.SetActive(true);
     }
 }

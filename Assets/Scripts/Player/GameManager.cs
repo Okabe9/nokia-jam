@@ -127,6 +127,12 @@ public class GameManager : MonoBehaviour
     currentLemming.GetComponent<Animator>().SetBool("isFirstTime", false);
     AudioManager.instance.PlaySFX("StartLevel");
     currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
+
+        GameObject[] buttonsInScene = GameObject.FindGameObjectsWithTag("Button");
+        foreach (GameObject button in buttonsInScene)
+        {
+            button.GetComponent<Button>().RestartObjects();
+        }
   }
 
   #endregion
@@ -179,5 +185,7 @@ public class GameManager : MonoBehaviour
     if (context.performed)
       currentLemming.GetComponent<LemmingController>().FriisSelf();
   }
+
+    
 
 }
