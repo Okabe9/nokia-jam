@@ -11,9 +11,9 @@ public class SelectionBorder : MonoBehaviour
 
 
         if (colliders.Length > 0)
-            gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
+            gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].backgroundColor;
         else
-            gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+            gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].foregroundColor;
     }
 
     private bool IsColliderCompletelyInside(Collider2D collider)
@@ -81,12 +81,12 @@ public class SelectionBorder : MonoBehaviour
                 {
                     if (collider.gameObject.layer != 6 && collider.gameObject.layer != 7)
                     {
-                        collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
+                        collider.gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].backgroundColor;
 
                     }
                 }
                 else
-                    collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+                    collider.gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].foregroundColor;
 
             }
         }
@@ -105,13 +105,13 @@ public class SelectionBorder : MonoBehaviour
                 {
                     if (collider.gameObject.layer != 6 && collider.gameObject.layer != 7)
                     {
-                        collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+                        collider.gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].foregroundColor;
 
                     }
                 }
 
                 else
-                    collider.gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
+                    collider.gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].backgroundColor;
 
             }
         }

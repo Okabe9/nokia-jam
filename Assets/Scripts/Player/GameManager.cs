@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -119,40 +120,48 @@ public class GameManager : MonoBehaviour
     }
 
     #endregion
-    private void MoveSelectionBorderUp()
+    public void MoveSelectionBorderUp(InputAction.CallbackContext context)
     {
-        gridY = (gridY + 2) % 3;
-        UpdateBorderPosition(gridX, gridY);
+        if (context.performed)
+        {
+            gridY = (gridY + 2) % 3;
+            UpdateBorderPosition(gridX, gridY);
+        }
 
     }
-    private void MoveSelectionBorderLeft()
+    public void MoveSelectionBorderLeft(InputAction.CallbackContext context)
     {
 
-        gridX = (gridX + 2) % 3;
-        UpdateBorderPosition(gridX, gridY);
-
+        if (context.performed)
+        {
+            gridX = (gridX + 2) % 3;
+            UpdateBorderPosition(gridX, gridY);
+        }
     }
-    private void MoveSelectionBorderDown()
+    public void MoveSelectionBorderDown(InputAction.CallbackContext context)
     {
 
-        gridY = (gridY + 1) % 3;
-        UpdateBorderPosition(gridX, gridY);
-
+        if (context.performed)
+        {
+            gridY = (gridY + 1) % 3;
+            UpdateBorderPosition(gridX, gridY);
+        }
     }
-    private void MoveSelectionBorderRight()
+    public void MoveSelectionBorderRight(InputAction.CallbackContext context)
     {
 
-        gridX = (gridX + 1) % 3;
-        UpdateBorderPosition(gridX, gridY);
-
+        if (context.performed)
+        {
+            gridX = (gridX + 1) % 3;
+            UpdateBorderPosition(gridX, gridY);
+        }
     }
-    private void Friis()
+    public void Friis(InputAction.CallbackContext context)
     {
-    FreezeSection(gridX, gridY);
+        if (context.performed)
+        {
+            FreezeSection(gridX, gridY);
+        }
     }
-    private void FriisPlayer()
-    {
-        FreezeSection(gridX, gridY);
-    }
-
+  
 }

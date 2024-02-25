@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+using UnityEngine.InputSystem;
 public class SceneChanger : MonoBehaviour
 {
     public static SceneChanger instance;
@@ -12,6 +12,7 @@ public class SceneChanger : MonoBehaviour
     public GameObject pauseMenu;
     public EventSystem eventSystem;
     GameObject gaijinEventSystem;
+    GameObject gameController; 
     private void Awake()
     {
 
@@ -27,6 +28,8 @@ public class SceneChanger : MonoBehaviour
     private void Start()
     {
         gaijinEventSystem = GameObject.FindGameObjectWithTag("EventSystem");
+        gameController = GameObject.FindGameObjectWithTag("GameManager");
+
         PalleteController.instance.SpritePainting();
     }
 
@@ -61,13 +64,30 @@ public class SceneChanger : MonoBehaviour
     {
         if (pauseMenu.activeSelf || forceClose)
         {
-            gaijinEventSystem.SetActive(true);
+            if(gaijinEventSystem != null)
+            {
+                gaijinEventSystem.SetActive(true);
+
+            }
+            if (gameController != null)
+            {
+                gameController.GetComponent<PlayerInput>().enabled =true;
+
+            }
             pauseMenu.SetActive(false);
         }
 
         else
         {
-            gaijinEventSystem.SetActive(false);
+            if (gaijinEventSystem != null)
+            {
+                gaijinEventSystem.SetActive(false);
+            }
+            if (gameController != null)
+            {
+                gameController.GetComponent<PlayerInput>().enabled = false;
+
+            }
             pauseMenu.SetActive(true);
         }
         PalleteController.instance.SpritePainting();

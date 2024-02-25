@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LemmingController : TimeStoppableEntity
 {
@@ -42,29 +43,6 @@ public class LemmingController : TimeStoppableEntity
     void Update()
     {
         isGrounded = IsGrounded();
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-
-            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
-
-            if (!isManuallyFrozen && freezeCooldownTimer <= 0 && isGrounded)
-            {
-                isManuallyFrozen = true;
-                AudioManager.instance.PlaySFX("FreezeLemming");
-                animator.speed = 0;
-
-            }
-            else if(isGrounded)
-            {
-                isManuallyFrozen = false;
-                isTimeStopped = false;
-                AudioManager.instance.PlaySFX("UnfreezeLemming");
-
-                freezeCooldownTimer = freezeCooldownTime;
-                animator.speed = 1;
-            }
-        }
-
 
         if (freezeCooldownTimer > 0)
             freezeCooldownTimer -= Time.deltaTime;
@@ -95,10 +73,10 @@ public class LemmingController : TimeStoppableEntity
             Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("ActiveBorder"));
 
             if (colliders.Length > 0)
-                gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].backgroundColor;
+                gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].backgroundColor;
             else
             {
-                gameObject.GetComponent<SpriteRenderer>().color = GameManager.instance.palletes[GameManager.instance.currentPalleteIndex].foregroundColor;
+                gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].foregroundColor;
 
                 if (isManuallyFrozen && snappedToPlatform && isTimeStopped)
                     isTimeStopped = false;
@@ -229,5 +207,30 @@ public class LemmingController : TimeStoppableEntity
         Vector3 position = transform.position;
         position.x -= pivotOffsetX * localScale.x * 2; // Multiply by 2 to compensate for the initial offset and the flip
         transform.position = position;
+    }
+
+    public void FriisSelf(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+
+            if (!isManuallyFrozen && freezeCooldownTimer <= 0 && isGrounded)
+            {
+                isManuallyFrozen = true;
+                AudioManager.instance.PlaySFX("FreezeLemming");
+                animator.speed = 0;
+
+            }
+            else if (isGrounded)
+            {
+                isManuallyFrozen = false;
+                isTimeStopped = false;
+                AudioManager.instance.PlaySFX("UnfreezeLemming");
+
+                freezeCooldownTimer = freezeCooldownTime;
+                animator.speed = 1;
+            }
+        }
     }
 }
