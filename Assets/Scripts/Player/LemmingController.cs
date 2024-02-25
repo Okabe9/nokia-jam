@@ -30,12 +30,13 @@ public class LemmingController : TimeStoppableEntity
   private bool isGrounded = false;
   [SerializeField] private float feetOffset = 4f;
   [SerializeField] private float heightOffset = 4f;
+  private BoxCollider2D collider;
 
   // Start is called before the first frame update
   void Start()
   {
     timeRemaining = walkTime;
-
+    collider = GetComponent<BoxCollider2D>();
     animator = gameObject.GetComponent<Animator>();
   }
 
@@ -88,8 +89,8 @@ public class LemmingController : TimeStoppableEntity
   bool WallInFront()
   {
 
-    bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall"));
-    Debug.DrawRay(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection * 4, 0), Color.red);
+    bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (collider.offset.x * currentDirection), transform.position.y + collider.offset.y, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall"));
+    Debug.DrawRay(new Vector3(transform.position.x + (collider.offset.x * currentDirection), transform.position.y + collider.offset.y, 0), new Vector2(currentDirection * 4, 0), Color.red);
 
     return wallInFront;
   }
@@ -175,7 +176,7 @@ public class LemmingController : TimeStoppableEntity
 
   private void CheckForPlatform()
   {
-    RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall", "Ground"));
+    RaycastHit2D hit = Physics2D.Raycast(new Vector3(transform.position.x + (collider.offset.x * currentDirection), transform.position.y - collider.offset.y, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall", "Ground"));
 
     if (isManuallyFrozen)
     {
@@ -239,7 +240,6 @@ public class LemmingController : TimeStoppableEntity
   {
 
     LayerMask groundLayer = LayerMask.NameToLayer("Ground");
-    BoxCollider2D collider = GetComponent<BoxCollider2D>();
 
     bool centerGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(collider.offset.x * currentDirection, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground", "Default", "Wall"));
     Debug.DrawRay(transform.position + new Vector3(collider.offset.x * currentDirection, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);

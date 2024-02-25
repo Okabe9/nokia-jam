@@ -126,12 +126,12 @@ TextureImporter:
       name: ManSlides_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: ManSlides_1
       rect:
         serializedVersion: 2
-        x: 11
+        x: 13
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: ManSlides_2
       rect:
         serializedVersion: 2
-        x: 22
+        x: 24
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: ManSlides_3
       rect:
         serializedVersion: 2
-        x: 33
+        x: 35
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: ManSlides_4
       rect:
         serializedVersion: 2
-        x: 44
+        x: 46
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: ManSlides_5
       rect:
         serializedVersion: 2
-        x: 55
+        x: 57
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: ManSlides_6
       rect:
         serializedVersion: 2
-        x: 66
+        x: 68
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: ManSlides_7
       rect:
         serializedVersion: 2
-        x: 77
+        x: 79
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: ManSlides_8
       rect:
         serializedVersion: 2
-        x: 88
+        x: 90
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: ManSlides_9
       rect:
         serializedVersion: 2
-        x: 99
+        x: 101
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: ManSlides_10
       rect:
         serializedVersion: 2
-        x: 110
+        x: 112
         y: 2
-        width: 11
-        height: 8
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        width: 7
+        height: 3
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
