@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject activeBorderPrefab;
 
     [SerializeField] Vector2 lemmingStartingPosition = new Vector2(0, 0);
-    [SerializeField] private GameObject lemming;
+    [SerializeField] public GameObject lemming;
+    private GameObject currentLemming;
 
     [SerializeField] private int frozenSelectionAmmo = 2;
 
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         Vector2[,] borderPositionsGrid = GetGrid();
         // Instantiate the hoverBorderPrefab at the 0, 0position
         hoverBorderInstance = Instantiate(hoverBorderPrefab, borderPositionsGrid[0, 0], Quaternion.identity);
+        currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
     }
 
     // SceneManagement
@@ -116,7 +118,7 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         AudioManager.instance.PlaySFX("StartLevel");
-        Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
+        currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
     }
 
     #endregion
@@ -162,6 +164,12 @@ public class GameManager : MonoBehaviour
         {
             FreezeSection(gridX, gridY);
         }
+    }
+
+    public void FriisSelf(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            currentLemming.GetComponent<LemmingController>().FriisSelf();
     }
   
 }

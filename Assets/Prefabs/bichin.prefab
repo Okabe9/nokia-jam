@@ -177,6 +177,7 @@ MonoBehaviour:
   originalLayer: 0
   walkTime: 0.1
   lemming: {fileID: 0}
+  isManuallyFrozen: 1
   freezeCooldownTime: 2
   feetOffset: 4
   heightOffset: 4

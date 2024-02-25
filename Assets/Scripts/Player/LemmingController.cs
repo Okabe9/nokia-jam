@@ -88,10 +88,66 @@ public class LemmingController : TimeStoppableEntity
     bool WallInFront()
     {
         
-        bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall", "Ground"));
+        bool wallInFront = Physics2D.Raycast(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection, 0), 4f, LayerMask.GetMask("Wall"));
         Debug.DrawRay(new Vector3(transform.position.x + (3.5f * currentDirection), transform.position.y - 2f, 0), new Vector2(currentDirection * 4, 0), Color.red);
 
         return wallInFront;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            int vertical = 0;
+            int horizontal = 0;
+            float threshold = 0.85f;
+
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                Vector2 direction = contact.point - (Vector2)transform.position;
+
+                direction.Normalize();
+
+                if (Vector2.Dot(direction, Vector2.up) > threshold)
+                {
+                    vertical++;
+                }
+                else if (Vector2.Dot(direction, Vector2.down) > threshold)
+                {
+                    vertical--;
+                }
+                else if (Vector2.Dot(direction, Vector2.right) > threshold)
+                {
+                    horizontal++;
+                }
+                else if (Vector2.Dot(direction, Vector2.left) > threshold)
+                {
+                    horizontal--;
+                }
+            }
+
+            if (vertical > 0)
+            {
+                //Up Collision
+            }
+            else if (vertical < 0)
+            {
+                //Down Collision
+            }
+            else if (horizontal > 0)
+            {
+                //Right Collision
+                currentDirection *= -1;
+                FlipHorizontally();
+
+            }
+            else if (horizontal < 0)
+            {
+                //Left Collision
+                currentDirection *= -1;
+                FlipHorizontally();
+            }
+        }
     }
 
     public void Death()
@@ -209,28 +265,25 @@ public class LemmingController : TimeStoppableEntity
         transform.position = position;
     }
 
-    public void FriisSelf(InputAction.CallbackContext context)
+    public void FriisSelf()
     {
-        if(context.performed)
+        Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+
+        if (!isManuallyFrozen && freezeCooldownTimer <= 0 && isGrounded)
         {
-            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+            isManuallyFrozen = true;
+            AudioManager.instance.PlaySFX("FreezeLemming");
+            animator.speed = 0;
 
-            if (!isManuallyFrozen && freezeCooldownTimer <= 0 && isGrounded)
-            {
-                isManuallyFrozen = true;
-                AudioManager.instance.PlaySFX("FreezeLemming");
-                animator.speed = 0;
+        }
+        else if (isGrounded)
+        {
+            isManuallyFrozen = false;
+            isTimeStopped = false;
+            AudioManager.instance.PlaySFX("UnfreezeLemming");
 
-            }
-            else if (isGrounded)
-            {
-                isManuallyFrozen = false;
-                isTimeStopped = false;
-                AudioManager.instance.PlaySFX("UnfreezeLemming");
-
-                freezeCooldownTimer = freezeCooldownTime;
-                animator.speed = 1;
-            }
+            freezeCooldownTimer = freezeCooldownTime;
+            animator.speed = 1;
         }
     }
 }
