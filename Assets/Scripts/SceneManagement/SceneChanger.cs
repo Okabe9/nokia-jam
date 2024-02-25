@@ -45,6 +45,8 @@ public class SceneChanger : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         TogglePause(true);
+        AudioManager.instance.PlaySFX("SelectUI");
+
         SceneManager.LoadScene(sceneName);
     }
     public void CloseGame()
@@ -74,7 +76,7 @@ public class SceneChanger : MonoBehaviour
                 gameController.GetComponent<PlayerInput>().enabled =true;
 
             }
-            AudioManager.instance.PlaySFX("ClosePause");
+     
 
             pauseMenu.SetActive(false);
         }
@@ -90,13 +92,12 @@ public class SceneChanger : MonoBehaviour
                 gameController.GetComponent<PlayerInput>().enabled = false;
 
             }
-            AudioManager.instance.PlaySFX("OpenPause");
+           
 
             pauseMenu.SetActive(true);
         }
-
+        AudioManager.instance.PlaySFX("OpenPause");
         PalleteController.instance.SpritePainting();
     }
-
 
 }

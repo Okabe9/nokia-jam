@@ -41,7 +41,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728438819388317927}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08071d90baf4c6c45b22706eddb23370, type: 3}
@@ -164,7 +164,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Freeze
-    clip: {fileID: 8300000, guid: 92073daabc50ce04a92ffe920873c202, type: 3}
+    clip: {fileID: 8300000, guid: 435d74040af0fa64687be1f32788cd10, type: 3}
     volume: 0.3
     pitch: 0
     loop: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: SelectUI
-    clip: {fileID: 8300000, guid: 1762d516afef1e2449b76bfe44a827ec, type: 3}
+    clip: {fileID: 8300000, guid: 7f44aabd0e59d054b872597e61f6196f, type: 3}
     volume: 0.3
     pitch: 0
     loop: 0
