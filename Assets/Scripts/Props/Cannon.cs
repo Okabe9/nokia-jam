@@ -18,10 +18,34 @@ public class Cannon : MonoBehaviour
         else
         {
             spawnTimer = spawnTime;
-            GameObject spawnedBullet = GameObject.Instantiate(bullet);
+
+            Quaternion rotation = Quaternion.Euler(0, 0, 0);
+
+            switch (direction)
+            {
+                case BulletDirection.UP:
+                    rotation = Quaternion.Euler(0, 0, -90);
+                    break;
+                case BulletDirection.DOWN:
+                    rotation = Quaternion.Euler(0, 0, 90);
+                    break;
+                case BulletDirection.LEFT:
+                    rotation = Quaternion.Euler(0, 0, 0);
+                    break;
+                case BulletDirection.RIGHT:
+                    rotation = Quaternion.Euler(0, 0, 180);
+                    break;
+                default:
+                    break;
+            }
+
+            GameObject spawnedBullet = GameObject.Instantiate(bullet, transform.position, rotation);
             spawnedBullet.transform.position = transform.position;
+            
+           
             spawnedBullet.GetComponent<Bullet>().direction = direction;
             spawnedBullet.GetComponent<Bullet>().bulletMoveTime = bulletMoveTime;
+
         }
     }
     
