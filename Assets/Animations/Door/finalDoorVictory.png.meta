@@ -1,0 +1,1073 @@
+fileFormatVersion: 2
+guid: dcf5e9506f0416a4d84944d2c8a936b6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: finalDoorVictory_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d8e8a7e454a77469ef510054d041bd
+      internalID: -758735517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5404a582372004c4fbcd09d88a98fffb
+      internalID: 375256025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cdf416242b7734b9c2dd859508ac76
+      internalID: 405360744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16e8b8faccb8624da488b12151b9e2b
+      internalID: -579013597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208bada3ae3d46a41b8a617e1fa1af08
+      internalID: 643184380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 008ea3db6d2cff6409a180494979817a
+      internalID: 1817408610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8537b30d68cb66141903a1e0c05083ba
+      internalID: -1826202233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adeff415d6b6a94eadcf3e45edd8126
+      internalID: 1497339005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc576410263f6142bb20738cb9651c0
+      internalID: 1634050348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55177093a13b5734593df6cc54b864a3
+      internalID: -1361219881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298766dd7306cbd4f92d3eb2c2233ebe
+      internalID: -1035812030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_11
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809978a0330f26441a62c05b3ac50b23
+      internalID: 558681605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_12
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911f1ce4a93efbe41a12e63c731d2f15
+      internalID: 1393709181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_13
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70159f6cb4e0d984b9a24f2922b312e4
+      internalID: -287065107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731955266cc66d04392f15a3a8a1001c
+      internalID: 2139789688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_15
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a253e2b08bfa7e749b9b236034b041c2
+      internalID: -2115821396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_16
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d3bf9b275a5b343934a15236df58cb
+      internalID: 1692758177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_17
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91865088bc2cd64f8b6500bb03d9386
+      internalID: 1360600017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_18
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7329adb8e55d34e9d6074801c442ad
+      internalID: 1454220060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_19
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631e70cf290202746a53394e2307e395
+      internalID: 1692351456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_20
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9403c9cb1d3944585f067fa884b9ab
+      internalID: 1565479667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_21
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ef67f2430dd9245a1bf4e5c06a1227
+      internalID: 1483452607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_22
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42378ac3932b7e84ea3fcd0e5288312f
+      internalID: 900836446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_23
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a807b4b6ae0ce4e895f796afb6b95b
+      internalID: -1076803921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_24
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c069fa0031b5c4baddb9cdfb1c3e41
+      internalID: 670538434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_25
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad15da631ce97884097997d6e8151813
+      internalID: 353511541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_26
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa67578e7d386ec48a9aa62cd3100580
+      internalID: 477590456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_27
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a496c9d24f8b242a826fa1b6a6685f
+      internalID: -949160512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_28
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31be3df2204d9c7499053a3feda76ac0
+      internalID: -1412613610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_29
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1963cc7d0b826d04ea9b742b748af4ac
+      internalID: -1785044804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_30
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d065ed9030ba234888e5376acfd6fd0
+      internalID: -50971413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_31
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03affd07395f0b64ea9fc93114184bb1
+      internalID: 1636582228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_32
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a95a32f8949bb4469c6ffdaee507c34
+      internalID: 2020139955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_33
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf06f1e4194764a43930f10c3091e015
+      internalID: 22960386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_34
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62e68105b5f972428e1021dae60ba90
+      internalID: 957791878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_35
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c69799d1b9e3d4c907d71e0bddde8d
+      internalID: 13012022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_36
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e4a3b20b7045640bbde27b4a9a5a48
+      internalID: 1835289775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_37
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8164ecc8cb0594b8b389e0fb359cff
+      internalID: 1111155100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_38
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b0c7b224876ce4fbfa6d7acd3d8ca8
+      internalID: 56394751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_39
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d8df12815120943b642b4b76374a26
+      internalID: 686689854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_40
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96585445eff3b64983265146dcdb2b3
+      internalID: 1432482572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_41
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db008be5f0e8dbd41bfb694f29a29070
+      internalID: 1770524657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalDoorVictory_42
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 0
+        width: 19
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd2d83c7ce10c243a31fd217c073ca3
+      internalID: -1212147355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      finalDoorVictory_0: -758735517
+      finalDoorVictory_1: 375256025
+      finalDoorVictory_10: -1035812030
+      finalDoorVictory_11: 558681605
+      finalDoorVictory_12: 1393709181
+      finalDoorVictory_13: -287065107
+      finalDoorVictory_14: 2139789688
+      finalDoorVictory_15: -2115821396
+      finalDoorVictory_16: 1692758177
+      finalDoorVictory_17: 1360600017
+      finalDoorVictory_18: 1454220060
+      finalDoorVictory_19: 1692351456
+      finalDoorVictory_2: 405360744
+      finalDoorVictory_20: 1565479667
+      finalDoorVictory_21: 1483452607
+      finalDoorVictory_22: 900836446
+      finalDoorVictory_23: -1076803921
+      finalDoorVictory_24: 670538434
+      finalDoorVictory_25: 353511541
+      finalDoorVictory_26: 477590456
+      finalDoorVictory_27: -949160512
+      finalDoorVictory_28: -1412613610
+      finalDoorVictory_29: -1785044804
+      finalDoorVictory_3: -579013597
+      finalDoorVictory_30: -50971413
+      finalDoorVictory_31: 1636582228
+      finalDoorVictory_32: 2020139955
+      finalDoorVictory_33: 22960386
+      finalDoorVictory_34: 957791878
+      finalDoorVictory_35: 13012022
+      finalDoorVictory_36: 1835289775
+      finalDoorVictory_37: 1111155100
+      finalDoorVictory_38: 56394751
+      finalDoorVictory_39: 686689854
+      finalDoorVictory_4: 643184380
+      finalDoorVictory_40: 1432482572
+      finalDoorVictory_41: 1770524657
+      finalDoorVictory_42: -1212147355
+      finalDoorVictory_5: 1817408610
+      finalDoorVictory_6: -1826202233
+      finalDoorVictory_7: 1497339005
+      finalDoorVictory_8: 1634050348
+      finalDoorVictory_9: -1361219881
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
