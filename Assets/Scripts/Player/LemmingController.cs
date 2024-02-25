@@ -99,6 +99,9 @@ public class LemmingController : TimeStoppableEntity
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
+    if (collision.gameObject.CompareTag("Killer"))
+    Death();
+
     if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
     {
       int vertical = 0;
@@ -198,8 +201,6 @@ public class LemmingController : TimeStoppableEntity
 
   private void OnCollisionStay2D(Collision2D collision)
   {
-    if (collision.gameObject.CompareTag("Killer"))
-      Death();
 
     if (collision.gameObject.CompareTag("MovingPlatform") && !collision.gameObject.GetComponent<TimeStoppableEntity>().isTimeStopped)
     {
