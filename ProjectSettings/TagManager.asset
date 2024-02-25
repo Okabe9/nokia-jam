@@ -8,6 +8,8 @@ TagManager:
   - Background
   - ColorChange
   - MovingPlatform
+  - FirstButton
+  - EventSystem
   layers:
   - Default
   - TransparentFX

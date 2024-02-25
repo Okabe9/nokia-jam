@@ -44,11 +44,13 @@ public class GameInput : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Z))
     {
       GameManager.instance.currentPalleteIndex = (GameManager.instance.currentPalleteIndex + 1) % 6;
-      GameManager.instance.SpritePainting();
+      SceneChanger.instance.SpritePainting();
     }
   }
   void UpdateBorderPosition()
   {
     GameManager.instance.UpdateBorderPosition(gridX, gridY);
-  }
+        SceneChanger.instance.SpritePainting();
+
+    }
 }
