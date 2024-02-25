@@ -35,14 +35,16 @@ public class LemmingController : TimeStoppableEntity
   // Start is called before the first frame update
   void Start()
   {
-    timeRemaining = walkTime;
     collider = GetComponent<BoxCollider2D>();
+    isGrounded = IsGrounded();
+    timeRemaining = walkTime;
     animator = gameObject.GetComponent<Animator>();
   }
 
   // Update is called once per frame
   void Update()
   {
+    animator.SetBool("isGrounded", isGrounded);
     isGrounded = IsGrounded();
 
     if (freezeCooldownTimer > 0)
