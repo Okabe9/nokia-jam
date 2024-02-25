@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1621678964820115446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289169730617078996}
+  - component: {fileID: 3811074008921227835}
+  - component: {fileID: 3730250579666598619}
+  - component: {fileID: 6759477070489617805}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1289169730617078996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621678964820115446}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5631381, y: 6.7894273, z: -0.917398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3811074008921227835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621678964820115446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e42f9ce3c80ec6b439aeb1397051cbec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  borderPositionsArray:
+  - {x: -14, y: 16}
+  - {x: 8, y: 16}
+  - {x: 30, y: 16}
+  - {x: -14, y: 0}
+  - {x: 8, y: 0}
+  - {x: 30, y: 0}
+  - {x: -14, y: -16}
+  - {x: 8, y: -16}
+  - {x: 30, y: -16}
+  hoverBorderPrefab: {fileID: 6341809145179985251, guid: 66460cdb57d3e2743adfa5e9219f921e, type: 3}
+  activeBorderPrefab: {fileID: 7216940893733552156, guid: 7245b641f4e74f24d85e343d6972ae7b, type: 3}
+  lemmingStartingPosition: {x: -24, y: 16}
+  lemming: {fileID: 5952284552760051719, guid: e2cfe2930cbf78843a289a77758b8394, type: 3}
+  frozenSelectionAmmo: 2
+  palletes:
+  - foregroundColor: {r: 0.2627451, g: 0.32156864, b: 0.2392157, a: 1}
+    backgroundColor: {r: 0.78039217, g: 0.9411765, b: 0.84705883, a: 1}
+  - foregroundColor: {r: 0.16862746, g: 0.24705882, b: 0.03529412, a: 1}
+    backgroundColor: {r: 0.60784316, g: 0.78039217, b: 0, a: 1}
+  - foregroundColor: {r: 0.101960786, g: 0.09803922, b: 0.078431375, a: 1}
+    backgroundColor: {r: 0.5294118, g: 0.5686275, b: 0.53333336, a: 1}
+  - foregroundColor: {r: 0.7803922, g: 0.94117653, b: 0.8470589, a: 1}
+    backgroundColor: {r: 0.2627451, g: 0.32156864, b: 0.2392157, a: 1}
+  - foregroundColor: {r: 0.60784316, g: 0.7803922, b: 0, a: 1}
+    backgroundColor: {r: 0.16862746, g: 0.24705884, b: 0.03529412, a: 1}
+  - foregroundColor: {r: 0.5294118, g: 0.5686275, b: 0.53333336, a: 1}
+    backgroundColor: {r: 0.10196079, g: 0.098039225, b: 0.078431375, a: 1}
+  currentPalleteIndex: 0
+--- !u!114 &3730250579666598619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621678964820115446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1582379214f2f04490465e6edd2e885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6759477070489617805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621678964820115446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 377edbc0933983544a147552ea12938a, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 197bb14c-a92e-4a22-929a-431bd0f5d287
+    m_ActionName: Player/OpenEscMenu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9cb79ced-2319-4d87-a970-38862c1ee35e
+    m_ActionName: Player/Interact[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 33d10e82-7222-41df-abdd-b2abbb0767bb
+    m_ActionName: Player/Navigate[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3811074008921227835}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveSelectionBorderUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1132deb7-913b-4821-94a6-6c711698583c
+    m_ActionName: Game/New action
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3811074008921227835}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveSelectionBorderDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8c6290a6-1c39-4fe9-8992-210f195c5e0a
+    m_ActionName: Game/DOWN[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3811074008921227835}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveSelectionBorderLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 31ad120c-6bd5-4b68-bd8d-bbb7b23710eb
+    m_ActionName: Game/LEFT[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3811074008921227835}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveSelectionBorderRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: beeced08-8ff8-43bd-9852-bde9f9753027
+    m_ActionName: Game/RIGHT[/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3811074008921227835}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Friis
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 023aaeb3-4312-4a29-908c-fe292283a5b1
+    m_ActionName: Game/FREEZE[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3811074008921227835}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: FriisSelf
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a9b07299-65ef-482f-82dc-4d1b0632d0c6
+    m_ActionName: Game/FREEZESELF[/Keyboard/f]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard
+  m_DefaultActionMap: Game
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

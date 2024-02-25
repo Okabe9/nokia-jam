@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5f83a5a58f6492b4a904f77604c0b460
+guid: a2e41daf3cffdde4caf6d089821246cf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ManJumps_0
+      name: jumping_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 9
-        height: 5
+        x: 0
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c237627271987124ebac1dbb0b4583e0
-      internalID: 1192926445
+      spriteID: dcf13af67eeafe9409c5916980acf139
+      internalID: 1154744294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_1
+      name: jumping_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 2
-        width: 9
-        height: 5
+        x: 13
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecba5026ddbf9664696cd02d6f6dc7e6
-      internalID: -364536813
+      spriteID: d4d77849ce4da4a4e97ad816cd381b82
+      internalID: -1797637873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_2
+      name: jumping_2
       rect:
         serializedVersion: 2
-        x: 23
-        y: 2
-        width: 9
-        height: 5
+        x: 26
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb4d62efd669fb6499cc563eb8a1b5f3
-      internalID: -2088329617
+      spriteID: 4b95a5035332e864b9630b088b8eca06
+      internalID: 669162166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_3
+      name: jumping_3
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2
-        width: 9
-        height: 5
+        x: 39
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0890ff5f884412148b5fefbc38ab6d2f
-      internalID: 2071920147
+      spriteID: 2055c151b85fb604c9bbf8a4654933b8
+      internalID: -1041877349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_4
+      name: jumping_4
       rect:
         serializedVersion: 2
-        x: 45
-        y: 2
-        width: 9
-        height: 5
+        x: 52
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0847d7a114d70484795590e8dd460127
-      internalID: 1883626959
+      spriteID: 7692d1e012802ca4991d586a1887914a
+      internalID: -1760470066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_5
+      name: jumping_5
       rect:
         serializedVersion: 2
-        x: 56
-        y: 2
-        width: 9
-        height: 5
+        x: 65
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,41 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c57ab9e3e4f34e4088149e937e3fcaa
-      internalID: 1748169200
+      spriteID: 7af08cf9b81aaa5499155eb70c16b112
+      internalID: -237146539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_6
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 2
-        width: 9
-        height: 5
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09e0775dbac5882419efcd5268bbe3e3
-      internalID: -2128233904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ManJumps_7
+      name: jumping_6
       rect:
         serializedVersion: 2
         x: 78
-        y: 2
-        width: 9
-        height: 5
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ae74a53f2aabf439fc955a669567fe
-      internalID: -509151005
+      spriteID: 80564b54ca17e0247991b621de1d31da
+      internalID: 1852973674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_8
+      name: jumping_7
       rect:
         serializedVersion: 2
-        x: 89
-        y: 2
-        width: 9
-        height: 5
+        x: 91
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8679e248dd562664ea2e8183a22f3e4c
-      internalID: 650402841
+      spriteID: 4d471196be33e3c4abee0f4eb8a36ee1
+      internalID: -1981611634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_9
+      name: jumping_8
       rect:
         serializedVersion: 2
-        x: 100
-        y: 2
-        width: 9
-        height: 5
+        x: 104
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbdbdd0a45515244ca431c40d77cd77f
-      internalID: -1774451622
+      spriteID: 6bdd10eb596ec2d4dabb92cccffcebba
+      internalID: 1967921510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_10
+      name: jumping_9
       rect:
         serializedVersion: 2
-        x: 111
-        y: 2
-        width: 9
-        height: 5
+        x: 117
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4e6b508e78845c4fa255f4bf73a9211
-      internalID: 1197756472
+      spriteID: cc36e0645e88d6b44ab637ed42ae494a
+      internalID: -1980865836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_11
+      name: jumping_10
       rect:
         serializedVersion: 2
-        x: 122
-        y: 2
-        width: 9
-        height: 5
+        x: 130
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6bd7dc2b37a46f4d8978e46ef8362b7
-      internalID: -417359264
+      spriteID: e34828becd766a54c99d803cc10ff442
+      internalID: 683959878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_12
+      name: jumping_11
       rect:
         serializedVersion: 2
-        x: 133
-        y: 2
-        width: 9
-        height: 5
+        x: 143
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2df09e759a04efa4fb6a5c82b97bc45e
-      internalID: -1429040989
+      spriteID: fe116648d05ac3449800b21bbb46d70c
+      internalID: -1498858276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_13
+      name: jumping_12
       rect:
         serializedVersion: 2
-        x: 144
-        y: 2
-        width: 9
-        height: 5
+        x: 156
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05e0dbd3568d1134297377b5b53e4589
-      internalID: -890018980
+      spriteID: f01ad45f3fea7894d877578be03e3a47
+      internalID: -1106893095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_14
+      name: jumping_13
       rect:
         serializedVersion: 2
-        x: 155
-        y: 2
-        width: 9
-        height: 5
+        x: 169
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be364d871ec284941b51899afd4c2d47
-      internalID: -2108455036
+      spriteID: 04531bde58e2e8541b7dbb4e553b135e
+      internalID: 999977615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ManJumps_15
+      name: jumping_14
       rect:
         serializedVersion: 2
-        x: 166
-        y: 2
-        width: 9
-        height: 5
+        x: 182
+        y: 0
+        width: 13
+        height: 6
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,8 +431,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c24ca63c02a0e944a8384870b7f0346
-      internalID: 1511784380
+      spriteID: 1dd49c175f7d9cb49a800c1e40d2f22a
+      internalID: -1792840130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumping_15
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 13
+        height: 6
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e237adbfff48ad44e9066eba2ff359bb
+      internalID: -520783915
       vertices: []
       indices: 
       edges: []
@@ -469,22 +469,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ManJumps_0: 1192926445
-      ManJumps_1: -364536813
-      ManJumps_10: 1197756472
-      ManJumps_11: -417359264
-      ManJumps_12: -1429040989
-      ManJumps_13: -890018980
-      ManJumps_14: -2108455036
-      ManJumps_15: 1511784380
-      ManJumps_2: -2088329617
-      ManJumps_3: 2071920147
-      ManJumps_4: 1883626959
-      ManJumps_5: 1748169200
-      ManJumps_6: -2128233904
-      ManJumps_7: -509151005
-      ManJumps_8: 650402841
-      ManJumps_9: -1774451622
+      jumping_0: 1154744294
+      jumping_1: -1797637873
+      jumping_10: 683959878
+      jumping_11: -1498858276
+      jumping_12: -1106893095
+      jumping_13: 999977615
+      jumping_14: -1792840130
+      jumping_15: -520783915
+      jumping_2: 669162166
+      jumping_3: -1041877349
+      jumping_4: -1760470066
+      jumping_5: -237146539
+      jumping_6: 1852973674
+      jumping_7: -1981611634
+      jumping_8: 1967921510
+      jumping_9: -1980865836
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

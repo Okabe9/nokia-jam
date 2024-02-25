@@ -21,25 +21,23 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -2128233904, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.083333336
-      value: {fileID: -509151005, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
+      value: {fileID: -1981611634, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - time: 0.033333335
+      value: {fileID: 1967921510, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - time: 0.06666667
+      value: {fileID: -1980865836, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - time: 0.11666667
+      value: {fileID: 683959878, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
     - time: 0.18333334
-      value: {fileID: 650402841, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.26666668
-      value: {fileID: -1774451622, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.36666667
-      value: {fileID: 1197756472, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.45
-      value: {fileID: -417359264, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.55
-      value: {fileID: -1429040989, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.6333333
-      value: {fileID: -890018980, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.73333335
-      value: {fileID: -2108455036, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - time: 0.81666666
-      value: {fileID: 1511784380, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
+      value: {fileID: -1498858276, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - time: 0.23333333
+      value: {fileID: -1106893095, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - time: 0.3
+      value: {fileID: 999977615, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - time: 0.35
+      value: {fileID: -1792840130, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - time: 0.4
+      value: {fileID: -520783915, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -62,27 +60,26 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -2128233904, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: -509151005, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: 650402841, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: -1774451622, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: 1197756472, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: -417359264, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: -1429040989, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: -890018980, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: -2108455036, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
-    - {fileID: 1511784380, guid: 5f83a5a58f6492b4a904f77604c0b460, type: 3}
+    - {fileID: -1981611634, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: 1967921510, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: -1980865836, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: 683959878, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: -1498858276, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: -1106893095, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: 999977615, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: -1792840130, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
+    - {fileID: -520783915, guid: a2e41daf3cffdde4caf6d089821246cf, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8333333
+    m_StopTime: 0.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

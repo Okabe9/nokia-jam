@@ -126,8 +126,8 @@ TextureImporter:
       name: finalDoorVictory_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
+        x: 0
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -147,8 +147,8 @@ TextureImporter:
       name: finalDoorVictory_1
       rect:
         serializedVersion: 2
-        x: 22
-        y: 3
+        x: 13
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -168,8 +168,8 @@ TextureImporter:
       name: finalDoorVictory_2
       rect:
         serializedVersion: 2
-        x: 41
-        y: 3
+        x: 26
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -189,8 +189,8 @@ TextureImporter:
       name: finalDoorVictory_3
       rect:
         serializedVersion: 2
-        x: 60
-        y: 3
+        x: 39
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -210,8 +210,8 @@ TextureImporter:
       name: finalDoorVictory_4
       rect:
         serializedVersion: 2
-        x: 79
-        y: 3
+        x: 52
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -231,8 +231,8 @@ TextureImporter:
       name: finalDoorVictory_5
       rect:
         serializedVersion: 2
-        x: 98
-        y: 3
+        x: 65
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -252,8 +252,8 @@ TextureImporter:
       name: finalDoorVictory_6
       rect:
         serializedVersion: 2
-        x: 117
-        y: 3
+        x: 78
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -273,8 +273,8 @@ TextureImporter:
       name: finalDoorVictory_7
       rect:
         serializedVersion: 2
-        x: 136
-        y: 3
+        x: 91
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -294,8 +294,8 @@ TextureImporter:
       name: finalDoorVictory_8
       rect:
         serializedVersion: 2
-        x: 155
-        y: 3
+        x: 104
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -315,8 +315,8 @@ TextureImporter:
       name: finalDoorVictory_9
       rect:
         serializedVersion: 2
-        x: 174
-        y: 3
+        x: 117
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -336,8 +336,8 @@ TextureImporter:
       name: finalDoorVictory_10
       rect:
         serializedVersion: 2
-        x: 193
-        y: 3
+        x: 130
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -357,8 +357,8 @@ TextureImporter:
       name: finalDoorVictory_11
       rect:
         serializedVersion: 2
-        x: 212
-        y: 3
+        x: 143
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -378,8 +378,8 @@ TextureImporter:
       name: finalDoorVictory_12
       rect:
         serializedVersion: 2
-        x: 231
-        y: 3
+        x: 156
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -399,8 +399,8 @@ TextureImporter:
       name: finalDoorVictory_13
       rect:
         serializedVersion: 2
-        x: 250
-        y: 3
+        x: 169
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -420,8 +420,8 @@ TextureImporter:
       name: finalDoorVictory_14
       rect:
         serializedVersion: 2
-        x: 269
-        y: 3
+        x: 182
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -441,8 +441,8 @@ TextureImporter:
       name: finalDoorVictory_15
       rect:
         serializedVersion: 2
-        x: 288
-        y: 3
+        x: 195
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -462,8 +462,8 @@ TextureImporter:
       name: finalDoorVictory_16
       rect:
         serializedVersion: 2
-        x: 307
-        y: 3
+        x: 208
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -483,8 +483,8 @@ TextureImporter:
       name: finalDoorVictory_17
       rect:
         serializedVersion: 2
-        x: 326
-        y: 3
+        x: 221
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -504,8 +504,8 @@ TextureImporter:
       name: finalDoorVictory_18
       rect:
         serializedVersion: 2
-        x: 345
-        y: 3
+        x: 234
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -525,8 +525,8 @@ TextureImporter:
       name: finalDoorVictory_19
       rect:
         serializedVersion: 2
-        x: 364
-        y: 3
+        x: 247
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -546,8 +546,8 @@ TextureImporter:
       name: finalDoorVictory_20
       rect:
         serializedVersion: 2
-        x: 383
-        y: 3
+        x: 260
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -567,8 +567,8 @@ TextureImporter:
       name: finalDoorVictory_21
       rect:
         serializedVersion: 2
-        x: 402
-        y: 3
+        x: 273
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -588,8 +588,8 @@ TextureImporter:
       name: finalDoorVictory_22
       rect:
         serializedVersion: 2
-        x: 421
-        y: 3
+        x: 286
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -609,8 +609,8 @@ TextureImporter:
       name: finalDoorVictory_23
       rect:
         serializedVersion: 2
-        x: 440
-        y: 3
+        x: 299
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -630,8 +630,8 @@ TextureImporter:
       name: finalDoorVictory_24
       rect:
         serializedVersion: 2
-        x: 459
-        y: 3
+        x: 312
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -651,8 +651,8 @@ TextureImporter:
       name: finalDoorVictory_25
       rect:
         serializedVersion: 2
-        x: 478
-        y: 3
+        x: 325
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -672,8 +672,8 @@ TextureImporter:
       name: finalDoorVictory_26
       rect:
         serializedVersion: 2
-        x: 497
-        y: 3
+        x: 338
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -693,8 +693,8 @@ TextureImporter:
       name: finalDoorVictory_27
       rect:
         serializedVersion: 2
-        x: 516
-        y: 3
+        x: 351
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -714,8 +714,8 @@ TextureImporter:
       name: finalDoorVictory_28
       rect:
         serializedVersion: 2
-        x: 535
-        y: 3
+        x: 364
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -735,8 +735,8 @@ TextureImporter:
       name: finalDoorVictory_29
       rect:
         serializedVersion: 2
-        x: 554
-        y: 3
+        x: 377
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -756,8 +756,8 @@ TextureImporter:
       name: finalDoorVictory_30
       rect:
         serializedVersion: 2
-        x: 573
-        y: 3
+        x: 390
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -777,8 +777,8 @@ TextureImporter:
       name: finalDoorVictory_31
       rect:
         serializedVersion: 2
-        x: 592
-        y: 3
+        x: 403
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -798,8 +798,8 @@ TextureImporter:
       name: finalDoorVictory_32
       rect:
         serializedVersion: 2
-        x: 611
-        y: 3
+        x: 416
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -819,8 +819,8 @@ TextureImporter:
       name: finalDoorVictory_33
       rect:
         serializedVersion: 2
-        x: 630
-        y: 3
+        x: 429
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -840,8 +840,8 @@ TextureImporter:
       name: finalDoorVictory_34
       rect:
         serializedVersion: 2
-        x: 649
-        y: 3
+        x: 442
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -861,8 +861,8 @@ TextureImporter:
       name: finalDoorVictory_35
       rect:
         serializedVersion: 2
-        x: 668
-        y: 3
+        x: 455
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -882,8 +882,8 @@ TextureImporter:
       name: finalDoorVictory_36
       rect:
         serializedVersion: 2
-        x: 687
-        y: 3
+        x: 468
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -893,8 +893,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9e4a3b20b7045640bbde27b4a9a5a48
-      internalID: 1835289775
+      spriteID: 2803bda0e84cf23468c80cb370c8c370
+      internalID: 470589853
       vertices: []
       indices: 
       edges: []
@@ -903,8 +903,8 @@ TextureImporter:
       name: finalDoorVictory_37
       rect:
         serializedVersion: 2
-        x: 706
-        y: 3
+        x: 481
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -914,8 +914,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d8164ecc8cb0594b8b389e0fb359cff
-      internalID: 1111155100
+      spriteID: be0b0019a0afc714293243dec0fd40a6
+      internalID: 738147099
       vertices: []
       indices: 
       edges: []
@@ -924,8 +924,8 @@ TextureImporter:
       name: finalDoorVictory_38
       rect:
         serializedVersion: 2
-        x: 725
-        y: 3
+        x: 494
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -935,8 +935,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1b0c7b224876ce4fbfa6d7acd3d8ca8
-      internalID: 56394751
+      spriteID: 8b7ad4f2eedbef848bafabe4faea7aa7
+      internalID: 1926034017
       vertices: []
       indices: 
       edges: []
@@ -945,8 +945,8 @@ TextureImporter:
       name: finalDoorVictory_39
       rect:
         serializedVersion: 2
-        x: 744
-        y: 3
+        x: 507
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -956,8 +956,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61d8df12815120943b642b4b76374a26
-      internalID: 686689854
+      spriteID: 2cbb5a766ead00e439ce0eb516588309
+      internalID: 1719202290
       vertices: []
       indices: 
       edges: []
@@ -966,8 +966,8 @@ TextureImporter:
       name: finalDoorVictory_40
       rect:
         serializedVersion: 2
-        x: 763
-        y: 3
+        x: 520
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -977,8 +977,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a96585445eff3b64983265146dcdb2b3
-      internalID: 1432482572
+      spriteID: 97edd93b028bf494e9d5c63194685455
+      internalID: 1637083546
       vertices: []
       indices: 
       edges: []
@@ -987,8 +987,8 @@ TextureImporter:
       name: finalDoorVictory_41
       rect:
         serializedVersion: 2
-        x: 782
-        y: 3
+        x: 533
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -998,8 +998,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db008be5f0e8dbd41bfb694f29a29070
-      internalID: 1770524657
+      spriteID: 5ccc507eec97c4d4c86a314cd118d5e9
+      internalID: -1279742370
       vertices: []
       indices: 
       edges: []
@@ -1008,8 +1008,8 @@ TextureImporter:
       name: finalDoorVictory_42
       rect:
         serializedVersion: 2
-        x: 801
-        y: 3
+        x: 546
+        y: 0
         width: 13
         height: 13
       alignment: 1
@@ -1019,8 +1019,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dd2d83c7ce10c243a31fd217c073ca3
-      internalID: -1212147355
+      spriteID: 5cf903e6fc3cb6a459ba29f0891441f7
+      internalID: 916877343
       vertices: []
       indices: 
       edges: []
@@ -1066,14 +1066,14 @@ TextureImporter:
       finalDoorVictory_33: 22960386
       finalDoorVictory_34: 957791878
       finalDoorVictory_35: 13012022
-      finalDoorVictory_36: 1835289775
-      finalDoorVictory_37: 1111155100
-      finalDoorVictory_38: 56394751
-      finalDoorVictory_39: 686689854
+      finalDoorVictory_36: 470589853
+      finalDoorVictory_37: 738147099
+      finalDoorVictory_38: 1926034017
+      finalDoorVictory_39: 1719202290
       finalDoorVictory_4: 643184380
-      finalDoorVictory_40: 1432482572
-      finalDoorVictory_41: 1770524657
-      finalDoorVictory_42: -1212147355
+      finalDoorVictory_40: 1637083546
+      finalDoorVictory_41: -1279742370
+      finalDoorVictory_42: 916877343
       finalDoorVictory_5: 1817408610
       finalDoorVictory_6: -1826202233
       finalDoorVictory_7: 1497339005
