@@ -1271,9 +1271,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.01111111
     width: 1
-    height: 1
+    height: 0.9777778
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -3229,8 +3229,9 @@ MonoBehaviour:
   patrolPoints:
   - {x: -20, y: -17}
   - {x: -20, y: -2}
-  - {x: 20, y: -2}
-  - {x: 20, y: 14}
+  - {x: 12, y: -2}
+  - {x: 12, y: 4}
+  - {x: 27, y: 4}
   pingPongMovement: 1
   activationTime: 0.1
   currentMovementDirection: {x: 1, y: 1}
@@ -3266,7 +3267,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.5, y: 0.5}
+  m_Offset: {x: 3.5, y: -0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 1}
