@@ -5061,14 +5061,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 681864935395886234, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 681864935395886234, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 08071d90baf4c6c45b22706eddb23370, type: 3}
     - target: {fileID: 1149465501120303414, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.2037616
@@ -5114,48 +5106,152 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.size
-      value: 3
+      propertyPath: soundEffects.Array.size
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[0].clip
+      propertyPath: soundEffects.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 08071d90baf4c6c45b22706eddb23370, type: 3}
+      objectReference: {fileID: 8300000, guid: aff33b50a973249449bd03d2b3284973, type: 3}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[0].name
-      value: GameSong
+      propertyPath: soundEffects.Array.data[0].name
+      value: InsertCD
       objectReference: {fileID: 0}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[1].clip
+      propertyPath: soundEffects.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 08071d90baf4c6c45b22706eddb23370, type: 3}
+      objectReference: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[1].loop
-      value: 1
+      propertyPath: soundEffects.Array.data[1].name
+      value: PCPipuPipu
       objectReference: {fileID: 0}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[1].name
-      value: MenuSong
-      objectReference: {fileID: 0}
-    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[2].clip
+      propertyPath: soundEffects.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 08071d90baf4c6c45b22706eddb23370, type: 3}
+      objectReference: {fileID: 8300000, guid: 97bdae8ef8dcc4940a4436983500513c, type: 3}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[2].loop
-      value: 1
+      propertyPath: soundEffects.Array.data[2].name
+      value: StartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[2].name
-      value: VictorySong
+      propertyPath: soundEffects.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92073daabc50ce04a92ffe920873c202, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[3].name
+      value: Freeze
       objectReference: {fileID: 0}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[1].volume
-      value: 0.444
+      propertyPath: soundEffects.Array.data[4].name
+      value: Unfreeze
       objectReference: {fileID: 0}
     - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
-      propertyPath: tracks.Array.data[2].volume
-      value: 0.444
+      propertyPath: soundEffects.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 435d74040af0fa64687be1f32788cd10, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[5].name
+      value: FreezeLemming
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[6].name
+      value: UnfreezeLemming
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 13a0682cd7441c045971a5b0ac3dab58, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[7].name
+      value: MoveUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1762d516afef1e2449b76bfe44a827ec, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[8].name
+      value: SelectUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[9].name
+      value: OpenPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[10].name
+      value: 'ClosePause '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[11].name
+      value: PaletaA
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[12].name
+      value: PaletaB
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[13].name
+      value: PaletaC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[5].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[6].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[7].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[8].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[9].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[10].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[11].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[12].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428555076044829945, guid: 2999f3fd89193274fb13ce885f185dd7, type: 3}
+      propertyPath: soundEffects.Array.data[13].volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

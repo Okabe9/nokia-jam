@@ -44,9 +44,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9b78548e362af1a4d8bbab6b2e70c196, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 08071d90baf4c6c45b22706eddb23370, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -145,8 +145,20 @@ MonoBehaviour:
   musicSource: {fileID: 681864935395886234}
   sfxSource: {fileID: 3984959304325441772}
   soundEffects:
+  - name: InsertCD
+    clip: {fileID: 8300000, guid: 7f44aabd0e59d054b872597e61f6196f, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PCPipuPipu
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   - name: StartLevel
-    clip: {fileID: 8300000, guid: 1762d516afef1e2449b76bfe44a827ec, type: 3}
+    clip: {fileID: 8300000, guid: 97bdae8ef8dcc4940a4436983500513c, type: 3}
     volume: 0.5
     pitch: 0
     loop: 0
@@ -175,9 +187,63 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
+  - name: MoveUI
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: SelectUI
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: OpenPause
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: 'ClosePause '
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PaletaA
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PaletaB
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PaletaC
+    clip: {fileID: 8300000, guid: 132b7840c84e4c64ba6870d9ad694e9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
   tracks:
-  - name: Song
-    clip: {fileID: 8300000, guid: 9b78548e362af1a4d8bbab6b2e70c196, type: 3}
+  - name: GameSong
+    clip: {fileID: 8300000, guid: 08071d90baf4c6c45b22706eddb23370, type: 3}
+    volume: 0.444
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: MenuSong
+    clip: {fileID: 8300000, guid: 286863b4eb4cf0146ba34f68653b672c, type: 3}
+    volume: 0.444
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: VictorySong
+    clip: {fileID: 8300000, guid: 5a83c0c3d100967498a854695eac9972, type: 3}
     volume: 0.444
     pitch: 0
     loop: 1
