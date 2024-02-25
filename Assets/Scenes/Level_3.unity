@@ -988,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_Name
-      value: portal (2)
+      value: TP_TR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1458,7 +1458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_Name
-      value: portal (6)
+      value: TP_MM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1911,7 +1911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_Name
-      value: portal (4)
+      value: TP_SUCCESS
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_IsActive
@@ -2627,7 +2627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_Name
-      value: portal (3)
+      value: TP_BR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3883,7 +3883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_Name
-      value: portal (5)
+      value: TP_BM
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_IsActive
@@ -5403,7 +5403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_Name
-      value: portal (1)
+      value: TP_TR
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5545,7 +5545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6545206796349225502, guid: f0299d07c79ad9347876c147921d9972, type: 3}
       propertyPath: m_Name
-      value: portal
+      value: TP_TL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5663,14 +5663,14 @@ SceneRoots:
   - {fileID: 115921223}
   - {fileID: 1751208982}
   - {fileID: 546547163}
-  - {fileID: 4553110371671244179}
-  - {fileID: 529961513}
   - {fileID: 1625944633}
+  - {fileID: 4553110371671244179}
   - {fileID: 2044612390}
   - {fileID: 630241536}
   - {fileID: 369473941}
   - {fileID: 1023104588}
   - {fileID: 1551558968}
+  - {fileID: 529961513}
   - {fileID: 2014234823}
   - {fileID: 1035984484}
   - {fileID: 1507400486}
