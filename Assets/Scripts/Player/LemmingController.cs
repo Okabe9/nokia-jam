@@ -34,6 +34,8 @@ public class LemmingController : TimeStoppableEntity
 
   private bool isDead = false;
 
+  private bool firstCall = true;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -298,7 +300,7 @@ public class LemmingController : TimeStoppableEntity
     {
       isManuallyFrozen = true;
       AudioManager.instance.PlaySFX("FreezeLemming");
-      GameManager.instance.CooldownInstance.GetComponent<Animator>().SetBool("IsFrozen", true);
+      GameManager.instance.CooldownInstance.GetComponent<Animator>().SetTrigger("Freeze");
       animator.speed = 0;
 
     }
@@ -314,8 +316,10 @@ public class LemmingController : TimeStoppableEntity
         AudioManager.instance.PlaySFX("UnfreezeLemming");
         GameManager.instance.CooldownInstance.GetComponent<Animator>().SetBool("IsFrozen", false);
 
-
-        freezeCooldownTimer = freezeCooldownTime;
+        if (firstCall)
+          firstCall = false;
+        else
+          freezeCooldownTimer = freezeCooldownTime;
         animator.speed = 1;
       }
 

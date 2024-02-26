@@ -21,6 +21,24 @@ public class Button : MonoBehaviour
     private bool buttonActivated = false;
     private int collisionCount = 0;
 
+    private bool initObjectState;
+    private bool initObjectCollState;
+
+    private void Start()
+    {
+        if (objectToAffect != null)
+        {
+             initObjectState = objectToAffect.activeSelf;
+            isAffectedButtonActive = initObjectState;
+        }
+
+        if (objectToAffectCollider != null)
+        {
+            initObjectCollState = objectToAffectCollider.activeSelf;
+            isAffectedButtonActive = initObjectCollState;
+        }
+    }
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
@@ -34,21 +52,28 @@ public class Button : MonoBehaviour
 
             if (isToggle && functionality == ButtonFunctionality.DESTROY)
             {
-                if (objectToAffect != null && objectToAffectCollider != null)
-                {
-                    objectToAffect.SetActive(!isAffectedButtonActive);
-                    objectToAffectCollider.SetActive(!isAffectedButtonActive);
-                }
-                else if (objectToAffect != null)
+                if (objectToAffect != null)
                 {
                     objectToAffect.SetActive(!isAffectedButtonActive);
                 }
-                else if (objectToAffectCollider != null)
+
+                if (objectToAffectCollider != null)
                 {
                     objectToAffectCollider.SetActive(!isAffectedButtonActive);
                 }
 
                 isAffectedButtonActive = !isAffectedButtonActive;
+            } else
+            {
+                if (objectToAffect != null)
+                {
+                    objectToAffect.SetActive(false);
+                }
+
+                if (objectToAffectCollider != null)
+                {
+                    objectToAffectCollider.SetActive(false);
+                }
             }
         }
     }
@@ -68,21 +93,15 @@ public class Button : MonoBehaviour
                         break;
                     case ButtonFunctionality.DESTROY:
 
-                        if (objectToAffect != null && objectToAffectCollider != null)
-                        {
-                            objectToAffect.SetActive(false);
-                            objectToAffectCollider.SetActive(false);
-                        }
-                        else if (objectToAffect != null)
+                        if (objectToAffect != null)
                         {
                             objectToAffect.SetActive(false);
                         }
-                        else if (objectToAffectCollider != null)
+
+                        if (objectToAffectCollider != null)
                         {
                             objectToAffectCollider.SetActive(false);
                         }
-
-
 
                         break;
                     case ButtonFunctionality.NONE:
@@ -109,9 +128,21 @@ public class Button : MonoBehaviour
     public void RestartObjects()
     {
         if(objectToAffect != null)
-            objectToAffect.SetActive(true);
+            objectToAffect.SetActive(initObjectState);
 
         if(objectToAffectCollider != null)
-            objectToAffectCollider.SetActive(true);
+            objectToAffectCollider.SetActive(initObjectCollState);
+
+        if (objectToAffect != null)
+        {
+            initObjectState = objectToAffect.activeSelf;
+            isAffectedButtonActive = initObjectState;
+        }
+
+        if (objectToAffectCollider != null)
+        {
+            initObjectCollState = objectToAffectCollider.activeSelf;
+            isAffectedButtonActive = initObjectCollState;
+        }
     }
 }
