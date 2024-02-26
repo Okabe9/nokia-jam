@@ -298,6 +298,7 @@ public class LemmingController : TimeStoppableEntity
     {
       isManuallyFrozen = true;
       AudioManager.instance.PlaySFX("FreezeLemming");
+      GameManager.instance.CooldownInstance.GetComponent<Animator>().SetTrigger("Freeze");
       animator.speed = 0;
 
     }
@@ -311,6 +312,8 @@ public class LemmingController : TimeStoppableEntity
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         AudioManager.instance.PlaySFX("UnfreezeLemming");
+        GameManager.instance.CooldownInstance.GetComponent<Animator>().SetTrigger("Unfreeze");
+
 
         freezeCooldownTimer = freezeCooldownTime;
         animator.speed = 1;

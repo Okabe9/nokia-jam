@@ -30,6 +30,12 @@ public class GameManager : MonoBehaviour
   private int gridX = 0;
   private int gridY = 0;
 
+  public GameObject CooldownPrefab;
+  public GameObject FreezeChargesPrefab;
+  public GameObject CooldownInstance;
+  private GameObject FreezeChargesInstance1;
+  private GameObject FreezeChargesInstance2;
+
   private void Awake()
   {
     if (instance == null)
@@ -46,24 +52,45 @@ public class GameManager : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
+    AudioManager.instance.StopMusic();
 
-        AudioManager.instance.StopMusic();
+  }
+
+  // SceneManagement
+
+  void Update()
+  {
+    switch (frozenSelectionAmmo)
+    {
+      case 0:
+        FreezeChargesInstance1.SetActive(false);
+        FreezeChargesInstance2.SetActive(false);
+        break;
+      case 1:
+        FreezeChargesInstance1.SetActive(false);
+        FreezeChargesInstance2.SetActive(true);
+        break;
+      case 2:
+        FreezeChargesInstance1.SetActive(true);
+        FreezeChargesInstance2.SetActive(true);
+        break;
 
     }
+  }
+  #region Game
 
-    // SceneManagement
-
-
-    #region Game
-
-    public void StartLevel()
+  public void StartLevel()
   {
     Vector2[,] borderPositionsGrid = GetGrid();
     hoverBorderInstance = Instantiate(hoverBorderPrefab, borderPositionsGrid[0, 0], Quaternion.identity);
-    AudioManager.instance.PlayMusic("GameSong"); 
+    AudioManager.instance.PlayMusic("GameSong");
+    CooldownInstance = Instantiate(CooldownPrefab, new Vector2(-37, -13), Quaternion.identity);
+    FreezeChargesInstance1 = Instantiate(FreezeChargesPrefab, new Vector2(-40, -13), Quaternion.identity);
+    FreezeChargesInstance2 = Instantiate(FreezeChargesPrefab, new Vector2(-40, -18), Quaternion.identity);
+
     currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
     currentLemming.GetComponent<Animator>().SetBool("isFirstTime", true);
-
+    PalleteController.instance.SpritePainting();
   }
   public Vector2[,] GetGrid()
   {
@@ -128,17 +155,17 @@ public class GameManager : MonoBehaviour
     currentLemming.GetComponent<Animator>().SetBool("isFirstTime", false);
     currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
 
-        GameObject[] buttonsInScene = GameObject.FindGameObjectsWithTag("Button");
-        foreach (GameObject button in buttonsInScene)
-        {
-            button.GetComponent<Button>().RestartObjects();
-        }
+    GameObject[] buttonsInScene = GameObject.FindGameObjectsWithTag("Button");
+    foreach (GameObject button in buttonsInScene)
+    {
+      button.GetComponent<Button>().RestartObjects();
+    }
     AudioManager.instance.PlaySFX("StartLevel");
 
-    }
+  }
 
-    #endregion
-    public void MoveSelectionBorderUp(InputAction.CallbackContext context)
+  #endregion
+  public void MoveSelectionBorderUp(InputAction.CallbackContext context)
   {
     if (context.performed)
     {
@@ -185,9 +212,10 @@ public class GameManager : MonoBehaviour
   public void FriisSelf(InputAction.CallbackContext context)
   {
     if (context.performed)
+
       currentLemming.GetComponent<LemmingController>().FriisSelf();
   }
 
-    
+
 
 }
