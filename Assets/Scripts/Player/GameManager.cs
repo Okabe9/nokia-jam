@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
   public int currentPalleteIndex = 0;
   private int gridX = 0;
   private int gridY = 0;
-
+  private bool levelStarted = false;
   public GameObject CooldownPrefab;
   public GameObject FreezeChargesPrefab;
   public GameObject CooldownInstance;
@@ -60,22 +60,27 @@ public class GameManager : MonoBehaviour
 
   void Update()
   {
-    switch (frozenSelectionAmmo)
+    if (levelStarted)
     {
-      case 0:
-        FreezeChargesInstance1.SetActive(false);
-        FreezeChargesInstance2.SetActive(false);
-        break;
-      case 1:
-        FreezeChargesInstance1.SetActive(false);
-        FreezeChargesInstance2.SetActive(true);
-        break;
-      case 2:
-        FreezeChargesInstance1.SetActive(true);
-        FreezeChargesInstance2.SetActive(true);
-        break;
+      switch (frozenSelectionAmmo)
+      {
+        case 0:
+          FreezeChargesInstance1.SetActive(false);
+          FreezeChargesInstance2.SetActive(false);
+          break;
+        case 1:
+          FreezeChargesInstance1.SetActive(false);
+          FreezeChargesInstance2.SetActive(true);
+          break;
+        case 2:
+          FreezeChargesInstance1.SetActive(true);
+          FreezeChargesInstance2.SetActive(true);
+          break;
 
+      }
     }
+
+
   }
   #region Game
 
@@ -87,6 +92,7 @@ public class GameManager : MonoBehaviour
     CooldownInstance = Instantiate(CooldownPrefab, new Vector2(-37, -13), Quaternion.identity);
     FreezeChargesInstance1 = Instantiate(FreezeChargesPrefab, new Vector2(-40, -13), Quaternion.identity);
     FreezeChargesInstance2 = Instantiate(FreezeChargesPrefab, new Vector2(-40, -18), Quaternion.identity);
+    levelStarted = true;
 
     currentLemming = Instantiate(lemming, lemmingStartingPosition, Quaternion.identity);
     currentLemming.GetComponent<Animator>().SetBool("isFirstTime", true);
