@@ -300,7 +300,7 @@ public class LemmingController : TimeStoppableEntity
     {
       isManuallyFrozen = true;
       AudioManager.instance.PlaySFX("FreezeLemming");
-      GameManager.instance.CooldownInstance.GetComponent<Animator>().SetTrigger("Freeze");
+      GameManager.instance.CooldownInstance.GetComponent<Animator>().SetBool("IsFrozen", true);
       animator.speed = 0;
 
     }

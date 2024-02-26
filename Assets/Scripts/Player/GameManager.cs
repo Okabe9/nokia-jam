@@ -88,7 +88,6 @@ public class GameManager : MonoBehaviour
   {
     Vector2[,] borderPositionsGrid = GetGrid();
     hoverBorderInstance = Instantiate(hoverBorderPrefab, borderPositionsGrid[0, 0], Quaternion.identity);
-    AudioManager.instance.PlayMusic("GameSong");
     CooldownInstance = Instantiate(CooldownPrefab, new Vector2(-37, -13), Quaternion.identity);
     FreezeChargesInstance1 = Instantiate(FreezeChargesPrefab, new Vector2(-40, -13), Quaternion.identity);
     FreezeChargesInstance2 = Instantiate(FreezeChargesPrefab, new Vector2(-40, -18), Quaternion.identity);
