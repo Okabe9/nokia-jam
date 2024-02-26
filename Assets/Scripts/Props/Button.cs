@@ -108,7 +108,10 @@ public class Button : MonoBehaviour
 
     public void RestartObjects()
     {
-        objectToAffect.SetActive(true);
-        objectToAffectCollider.SetActive(true);
+        if(objectToAffect != null)
+            objectToAffect.SetActive(true);
+
+        if(objectToAffectCollider != null)
+            objectToAffectCollider.SetActive(true);
     }
 }

@@ -49,9 +49,4 @@ public class Pinxo : TimeStoppableEntity
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-            collision.gameObject.GetComponent<LemmingController>().Death();
-    }
 }
