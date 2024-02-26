@@ -223,7 +223,9 @@ public class LemmingController : TimeStoppableEntity
 
       if (isManuallyFrozen)
       {
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         collision.gameObject.GetComponent<MovingPlatform>().attachedLemming = this;
+
       }
       else
       {
@@ -252,6 +254,7 @@ public class LemmingController : TimeStoppableEntity
         MovingPlatform platform = collision.gameObject.GetComponent<MovingPlatform>();
         print(platform);
         platform.attachedLemming = null;
+
       }
     }
 
@@ -263,8 +266,8 @@ public class LemmingController : TimeStoppableEntity
 
     LayerMask groundLayer = LayerMask.NameToLayer("Ground");
 
-    bool centerGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(collider.offset.x * currentDirection, collider.offset.y), Vector2.down, heightOffset, LayerMask.GetMask("Ground", "Default", "Wall"));
-    Debug.DrawRay(transform.position + new Vector3(collider.offset.x * currentDirection, collider.offset.y, 0f), new Vector2(0f, -heightOffset), Color.white);
+    bool centerGrounded = Physics2D.Raycast((Vector2)transform.position + new Vector2(collider.offset.x * currentDirection, collider.offset.y), Vector2.down, heightOffset + 2, LayerMask.GetMask("Ground", "Default", "Wall"));
+    Debug.DrawRay(transform.position + new Vector3(collider.offset.x * currentDirection, collider.offset.y, 0f), new Vector2(0f, -(heightOffset + 2)), Color.white);
 
     return centerGrounded;
   }
@@ -302,8 +305,11 @@ public class LemmingController : TimeStoppableEntity
     {
       if (isManuallyFrozen)
       {
+
         isManuallyFrozen = false;
         isTimeStopped = false;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         AudioManager.instance.PlaySFX("UnfreezeLemming");
 
         freezeCooldownTimer = freezeCooldownTime;
