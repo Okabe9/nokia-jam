@@ -25,6 +25,8 @@ public class Button : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
         {
+            gameObject.GetComponent<Animator>().SetTrigger("Activate");
+
             collisionCount++;
 
             if (isOneTimeUse)
