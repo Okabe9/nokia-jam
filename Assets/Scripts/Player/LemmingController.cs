@@ -167,8 +167,8 @@ public class LemmingController : TimeStoppableEntity
     if (!imDead)
     {
       GameManager.instance.RestartLevel();
-      Destroy(gameObject);
       imDead = true;
+      Destroy(this.gameObject);
 
     }
 
