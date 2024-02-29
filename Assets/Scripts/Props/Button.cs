@@ -43,6 +43,8 @@ public class Button : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Killer") || collision.CompareTag("MovingPlatform"))
         {
+            AudioManager.instance.PlaySFX("Blip3");
+
             gameObject.GetComponent<Animator>().SetTrigger("Activate");
 
             collisionCount++;
