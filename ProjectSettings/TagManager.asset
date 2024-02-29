@@ -23,7 +23,7 @@ TagManager:
   - BehindFrozenPlane
   - SelectionBorder
   - ActiveBorder
-  - 
+  - CameraSortingLayer
   - 
   - 
   - 
@@ -59,4 +59,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3657125503
+    locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 4010102297
     locked: 0
