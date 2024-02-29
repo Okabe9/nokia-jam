@@ -62,8 +62,8 @@ Material:
     - _Size: 0.1
     - _WaveDistanceFromCenter: 1
     m_Colors:
-    - _BackgroundColor: {r: 1, g: 1, b: 1, a: 0}
-    - _ForegroundColor: {r: 0.3679245, g: 0.12669098, b: 0.1614843, a: 0}
+    - _BackgroundColor: {r: 0.9009434, g: 1, b: 0.9414812, a: 0}
+    - _ForegroundColor: {r: 0.3364159, g: 0.6886792, b: 0.23064259, a: 0}
     - _FromBackgroundColor: {r: 1, g: 1, b: 1, a: 0}
     - _FromForegroundColor: {r: 0, g: 0, b: 0, a: 0}
     - _RingSpawnPosition: {r: 0.5, g: 0.5, b: 0, a: 0}

@@ -83,11 +83,8 @@ public class LemmingController : TimeStoppableEntity
     {
       Collider2D[] colliders = Physics2D.OverlapBoxAll(gameObject.GetComponent<BoxCollider2D>().bounds.center, gameObject.GetComponent<BoxCollider2D>().bounds.size, 0f, LayerMask.GetMask("ActiveBorder"));
 
-      if (colliders.Length > 0)
-        gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].backgroundColor;
-      else
+
       {
-        gameObject.GetComponent<SpriteRenderer>().color = PalleteController.instance.palletes[PalleteController.instance.currentPalleteIndex].foregroundColor;
 
         if (isManuallyFrozen && snappedToPlatform && isTimeStopped)
           isTimeStopped = false;
