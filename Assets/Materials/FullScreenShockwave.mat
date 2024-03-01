@@ -60,11 +60,17 @@ Material:
     m_Floats:
     - _ShockWaveStrength: 0.01
     - _Size: 0.1
-    - _WaveDistanceFromCenter: 1
+    - _WaveDistanceFromCenter: -0.1
     m_Colors:
-    - _BackgroundColor: {r: 0.9009434, g: 1, b: 0.9414812, a: 0}
-    - _ForegroundColor: {r: 0.3364159, g: 0.6886792, b: 0.23064259, a: 0}
-    - _FromBackgroundColor: {r: 1, g: 1, b: 1, a: 0}
-    - _FromForegroundColor: {r: 0, g: 0, b: 0, a: 0}
+    - _BackgroundColor: {r: 0.14901957, g: 0.32941175, b: 0.48627448, a: 1}
+    - _ForegroundColor: {r: 0.6039216, g: 0.8352941, b: 0.7921569, a: 1}
+    - _FromBackgroundColor: {r: 0, g: 0, b: 0, a: 0}
+    - _FromForegroundColor: {r: 1, g: 1, b: 1, a: 0}
+    - _FromPlayerColor: {r: 1, g: 0, b: 0, a: 1}
+    - _FromSelectionBorderColor: {r: 0, g: 0, b: 1, a: 0}
+    - _FromTimeStoppabeColor: {r: 0, g: 1, b: 0, a: 1}
+    - _PlayerColor: {r: 0.6784314, g: 0.7254902, b: 0.8901961, a: 1}
     - _RingSpawnPosition: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _SelectionBorderColor: {r: 0.7176471, g: 0.26666668, b: 0.72156864, a: 0}
+    - _TimeStoppabeColor: {r: 0.6745098, g: 0.8666667, b: 0.90588236, a: 1}
   m_BuildTextureStacks: []
