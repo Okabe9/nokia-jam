@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
     }
     public void StopMusic()
     {
-        musicSource.Stop(); 
+        musicSource.Stop();
     }
     public void PlaySFX(string name)
     {
@@ -63,7 +63,7 @@ public class AudioManager : MonoBehaviour
     }
     public void StopMusicLoop()
     {
-        musicSource.loop = false; 
+        musicSource.loop = false;
     }
     public void StartMusicLoop()
     {

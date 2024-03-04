@@ -5,28 +5,28 @@ using UnityEngine.UI;
 
 public class PalleteController : MonoBehaviour
 {
-  public static PalleteController instance;
+    public static PalleteController instance;
 
-  // This method is called to change the scene
-  [SerializeField]
-  public List<Pallete> palletes = new List<Pallete>();
-  public int currentPalleteIndex = 0;
+    // This method is called to change the scene
+    [SerializeField]
+    public List<Pallete> palletes = new List<Pallete>();
+    public int currentPalleteIndex = 0;
 
-  private void Awake()
-  {
-    DontDestroyOnLoad(gameObject);
-
-    if (instance == null)
+    private void Awake()
     {
-      instance = this;
-    }
-    else if (instance != this)
-    {
-      Destroy(gameObject);
-    }
-  }
+        DontDestroyOnLoad(gameObject);
 
-  public void SpritePainting()
-  {
-  }
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void SpritePainting()
+    {
+    }
 }

@@ -12,7 +12,7 @@ public class AnytaMaxWynn : MonoBehaviour
             Destroy(collision.gameObject);
             gameObject.GetComponent<Animator>().SetTrigger("FinalVictory");
             AudioManager.instance.PlayMusic("VictorySong");
-            AudioManager.instance.StopMusicLoop(); 
+            AudioManager.instance.StopMusicLoop();
             // On Anim End Call Win
         }
     }
@@ -23,6 +23,6 @@ public class AnytaMaxWynn : MonoBehaviour
     public void PlaySparkle()
 
     {
-        AudioManager.instance.PlaySFX("Freeze"); 
+        AudioManager.instance.PlaySFX("Freeze");
     }
 }

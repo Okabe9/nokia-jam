@@ -28,7 +28,7 @@ public class Button : MonoBehaviour
     {
         if (objectToAffect != null)
         {
-             initObjectState = objectToAffect.activeSelf;
+            initObjectState = objectToAffect.activeSelf;
             isAffectedButtonActive = initObjectState;
         }
 
@@ -65,7 +65,8 @@ public class Button : MonoBehaviour
                 }
 
                 isAffectedButtonActive = !isAffectedButtonActive;
-            } else
+            }
+            else
             {
                 if (objectToAffect != null)
                 {
@@ -129,10 +130,10 @@ public class Button : MonoBehaviour
 
     public void RestartObjects()
     {
-        if(objectToAffect != null)
+        if (objectToAffect != null)
             objectToAffect.SetActive(initObjectState);
 
-        if(objectToAffectCollider != null)
+        if (objectToAffectCollider != null)
             objectToAffectCollider.SetActive(initObjectCollState);
 
         if (objectToAffect != null)

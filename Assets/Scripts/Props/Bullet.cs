@@ -18,17 +18,17 @@ public class Bullet : TimeStoppableEntity
     [HideInInspector] public float bulletMoveTime;
 
     private float bulletMoveTimer = 0;
-    
+
 
     // Update is called once per frame
     void Update()
     {
-        if(bulletMoveTimer > 0)
+        if (bulletMoveTimer > 0)
             bulletMoveTimer -= Time.deltaTime;
-        else if(!isTimeStopped)
+        else if (!isTimeStopped)
         {
             //Move one unit forward
-            switch(direction)
+            switch (direction)
             {
                 case BulletDirection.UP:
                     transform.position += new Vector3(0, 1, 0);
@@ -50,7 +50,7 @@ public class Bullet : TimeStoppableEntity
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<LemmingController>().Death();
         }

@@ -5,31 +5,31 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
 
-  public static InputManager instance;
+    public static InputManager instance;
 
 
 
-  // Start is called before the first frame update
+    // Start is called before the first frame update
 
-  private void Awake()
-  {
-    if (instance == null)
+    private void Awake()
     {
-      instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
     }
-    else if (instance != this)
+    void Start()
     {
-      Destroy(gameObject);
+
     }
 
-  }
-  void Start()
-  {
-
-  }
-
-  // Update is called once per frame
-  void Update()
-  {
-  }
+    // Update is called once per frame
+    void Update()
+    {
+    }
 }

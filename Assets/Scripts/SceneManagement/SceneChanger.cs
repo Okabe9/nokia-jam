@@ -12,7 +12,7 @@ public class SceneChanger : MonoBehaviour
     public GameObject pauseMenu;
     public EventSystem eventSystem;
     GameObject gaijinEventSystem;
-    GameObject gameController; 
+    GameObject gameController;
     private void Awake()
     {
 
@@ -35,10 +35,10 @@ public class SceneChanger : MonoBehaviour
 
     private void Update()
     {
-        
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause(); 
+            TogglePause();
         }
     }
 
@@ -52,7 +52,7 @@ public class SceneChanger : MonoBehaviour
     {
         TogglePause();
     }
- 
+
     public void ChangeColorPallete(int palleteIndex)
     {
         PalleteController.instance.currentPalleteIndex = palleteIndex;
@@ -65,17 +65,17 @@ public class SceneChanger : MonoBehaviour
     {
         if (pauseMenu.activeSelf || forceClose)
         {
-            if(gaijinEventSystem != null)
+            if (gaijinEventSystem != null)
             {
                 gaijinEventSystem.SetActive(true);
 
             }
             if (gameController != null)
             {
-                gameController.GetComponent<PlayerInput>().enabled =true;
+                gameController.GetComponent<PlayerInput>().enabled = true;
 
             }
-     
+
 
             pauseMenu.SetActive(false);
         }
@@ -91,7 +91,7 @@ public class SceneChanger : MonoBehaviour
                 gameController.GetComponent<PlayerInput>().enabled = false;
 
             }
-           
+
 
             pauseMenu.SetActive(true);
         }
