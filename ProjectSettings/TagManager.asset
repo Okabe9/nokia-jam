@@ -11,6 +11,7 @@ TagManager:
   - FirstButton
   - EventSystem
   - GameManager
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -62,4 +63,7 @@ TagManager:
     locked: 0
   - name: CameraSortingLayer
     uniqueID: 4010102297
+    locked: 0
+  - name: CameraFreezedSortingLayer
+    uniqueID: 2293000827
     locked: 0

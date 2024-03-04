@@ -30,12 +30,15 @@ public class GameManager : MonoBehaviour
   private int gridX = 0;
   private int gridY = 0;
   private bool levelStarted = false;
+
+  //Mover a un nuevo script HUD
   public GameObject CooldownPrefab;
   public GameObject FreezeChargesPrefab;
   public GameObject CooldownInstance;
   private GameObject FreezeChargesInstance1;
   private GameObject FreezeChargesInstance2;
-
+  public GameObject sectionShader;
+  private GameObject[,] sectionShadersGrid = new GameObject[3, 3];
   private void Awake()
   {
     if (instance == null)
@@ -87,6 +90,7 @@ public class GameManager : MonoBehaviour
   public void StartLevel()
   {
     Vector2[,] borderPositionsGrid = GetGrid();
+    InstantiateShaders(borderPositionsGrid);
     hoverBorderInstance = Instantiate(hoverBorderPrefab, borderPositionsGrid[0, 0], Quaternion.identity);
     CooldownInstance = Instantiate(CooldownPrefab, new Vector2(-37, -13), Quaternion.identity);
     FreezeChargesInstance1 = Instantiate(FreezeChargesPrefab, new Vector2(-40, -13), Quaternion.identity);
@@ -127,11 +131,13 @@ public class GameManager : MonoBehaviour
     Vector2 borderPosition = grid[gridY, gridX];
     foreach (GameObject border in activatedBorderInstances)
     {
+
       Vector2 activeBorderPosition = new Vector2(border.transform.position.x, border.transform.position.y);
       if (borderPosition == activeBorderPosition)
       {
         activatedBorderInstances.Remove(border);
         Destroy(border);
+        sectionShadersGrid[gridY, gridX].GetComponent<SpriteRenderer>().enabled = false;
         selectionBorder.UnfreezeTimeStoppableEntities();
 
         frozenSelectionAmmo++;
@@ -146,6 +152,8 @@ public class GameManager : MonoBehaviour
 
     GameObject activeBorderInstance = Instantiate(activeBorderPrefab, borderPosition, Quaternion.identity);
     activatedBorderInstances.Add(activeBorderInstance);
+    sectionShadersGrid[gridY, gridX].GetComponent<SpriteRenderer>().enabled = true;
+
     selectionBorder.FreezeTimeStoppableEntities();
 
     frozenSelectionAmmo--;
@@ -220,7 +228,19 @@ public class GameManager : MonoBehaviour
 
       currentLemming.GetComponent<LemmingController>().FriisSelf();
   }
-
+  public void InstantiateShaders(Vector2[,] positionsGrid)
+  {
+    for (int i = 0; i < 3; i++)
+    {
+      for (int j = 0; j < 3; j++)
+      {
+        print(sectionShader + " " + positionsGrid);
+        GameObject shaderSection = Instantiate(sectionShader, positionsGrid[i, j], Quaternion.identity);
+        shaderSection.GetComponent<SpriteRenderer>().enabled = false;
+        sectionShadersGrid[i, j] = shaderSection;
+      }
+    }
+  }
 
 
 }
